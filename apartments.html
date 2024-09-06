@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="scripts.js"></script>
+    <title>Apartments</title>
+  </head>
+  <body>
+    <main>
+      <!-- Navigation -->
+      <nav class="navbar">
+        <ul>
+          <li><a href="apartments.html">Appartments</a></li>
+          <li><a href="contact.html">Anfragen</a></li>
+          <li>
+            <a href="index.html" class="anchorPicture"
+              ><img src="Pictures/Logo.PNG" alt="Logo"
+            /></a>
+          </li>
+          <li><a href="index.html">Über Wagrain</a></li>
+          <li><a href="index.html">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <!-- Full-screen slider -->
+      <div id="fullScreenSlider" class="fullScreenSlider">
+        <span class="close" onclick="closeFullScreenSlider()">&times;</span>
+        <div class="fullScreenSlides"></div>
+        <button class="prev" onclick="changeFullScreenSlide(-1)">
+          &#10094;
+        </button>
+        <button class="next" onclick="changeFullScreenSlide(1)">
+          &#10095;
+        </button>
+      </div>
+
+      <!-- First Parent -->
+      <div class="parent" id="parentMarginTop">
+        <div class="child">
+          <h2>Apartment 1</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore
+            impedit, optio sint, quibusdam eos velit animi obcaecati ullam neque
+            amet dolorum ipsum asperiores odio saepe, cum quidem quia mollitia!
+            Rem?
+          </p>
+
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore
+            impedit, optio sint, quibusdam eos velit animi obcaecati ullam neque
+            amet dolorum ipsum asperiores odio saepe, cum quidem quia mollitia!
+            Rem?
+          </p>
+
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore
+            impedit, optio sint, quibusdam eos velit animi obcaecati ullam neque
+            amet dolorum ipsum asperiores odio saepe, cum quidem quia mollitia!
+            Rem?
+          </p>
+        </div>
+        <div class="child">
+          <div class="sliderSmall" data-Slider-index="1">
+            <button
+              class="prev"
+              onclick="changeSlide(this.closest('.sliderSmall'), -1)"
+            >
+              &#10094;
+            </button>
+            <div
+              class="slides"
+              onclick="openFullScreenSlider(this.closest('.sliderSmall'))"
+            >
+              <img
+                src="Pictures/Index/HouseFront.jpg"
+                alt="HouseFront"
+                class="slide"
+              />
+              <img
+                src="Pictures/Index/ExampleImage1.jpg"
+                alt="ImageExample1"
+                class="slide"
+              />
+              <img
+                src="Pictures/Index/ExampleImage2.jpg"
+                alt="ImageExample2"
+                class="slide"
+              />
+              <img
+                src="Pictures/Index/ExampleImage3.jpg"
+                alt="ImageExample3"
+                class="slide"
+              />
+            </div>
+            <button
+              class="next"
+              onclick="changeSlide(this.closest('.sliderSmall'), 1)"
+            >
+              &#10095;
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Second Parent -->
+      <div class="parent">
+        <div class="child">
+          <div class="sliderSmall" data-Slider-index="2">
+            <button
+              class="prev"
+              onclick="changeSlide(this.closest('.sliderSmall'), -1)"
+            >
+              &#10094;
+            </button>
+            <div
+              class="slides"
+              onclick="openFullScreenSlider(this.closest('.sliderSmall'))"
+            >
+              <img
+                src="Pictures/Index/HouseFront.jpg"
+                alt="HouseFront"
+                class="slide"
+              />
+              <img
+                src="Pictures/Index/ExampleImage1.jpg"
+                alt="ImageExample1"
+                class="slide"
+              />
+              <img
+                src="Pictures/Index/ExampleImage2.jpg"
+                alt="ImageExample2"
+                class="slide"
+              />
+              <img
+                src="Pictures/Index/ExampleImage3.jpg"
+                alt="ImageExample3"
+                class="slide"
+              />
+            </div>
+            <button
+              class="next"
+              onclick="changeSlide(this.closest('.sliderSmall'), 1)"
+            >
+              &#10095;
+            </button>
+          </div>
+        </div>
+        <div class="child">
+          <h2>Apartment 2</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore
+            impedit, optio sint, quibusdam eos velit animi obcaecati ullam neque
+            amet dolorum ipsum asperiores odio saepe, cum quidem quia mollitia!
+            Rem?
+          </p>
+
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore
+            impedit, optio sint, quibusdam eos velit animi obcaecati ullam neque
+            amet dolorum ipsum asperiores odio saepe, cum quidem quia mollitia!
+            Rem?
+          </p>
+
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore
+            impedit, optio sint, quibusdam eos velit animi obcaecati ullam neque
+            amet dolorum ipsum asperiores odio saepe, cum quidem quia mollitia!
+            Rem?
+          </p>
+        </div>
+      </div>
+
+      <!-- Third Parent -->
+      <div class="parent">
+        <div class="child">
+          <h2>Apartment 3</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore
+            impedit, optio sint, quibusdam eos velit animi obcaecati ullam neque
+            amet dolorum ipsum asperiores odio saepe, cum quidem quia mollitia!
+            Rem?
+          </p>
+
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore
+            impedit, optio sint, quibusdam eos velit animi obcaecati ullam neque
+            amet dolorum ipsum asperiores odio saepe, cum quidem quia mollitia!
+            Rem?
+          </p>
+
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore
+            impedit, optio sint, quibusdam eos velit animi obcaecati ullam neque
+            amet dolorum ipsum asperiores odio saepe, cum quidem quia mollitia!
+            Rem?
+          </p>
+        </div>
+
+        <div class="child">
+          <div class="sliderSmall" data-Slider-index="3">
+            <button
+              class="prev"
+              onclick="changeSlide(this.closest('.sliderSmall'), -1)"
+            >
+              &#10094;
+            </button>
+            <div
+              class="slides"
+              onclick="openFullScreenSlider(this.closest('.sliderSmall'))"
+            >
+              <img
+                src="Pictures/Index/HouseFront.jpg"
+                alt="HouseFront"
+                class="slide"
+              />
+              <img
+                src="Pictures/Index/ExampleImage1.jpg"
+                alt="ImageExample1"
+                class="slide"
+              />
+              <img
+                src="Pictures/Index/ExampleImage2.jpg"
+                alt="ImageExample2"
+                class="slide"
+              />
+              <img
+                src="Pictures/Index/ExampleImage3.jpg"
+                alt="ImageExample3"
+                class="slide"
+              />
+            </div>
+            <button
+              class="next"
+              onclick="changeSlide(this.closest('.sliderSmall'), 1)"
+            >
+              &#10095;
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer">
+        <div class="footerContent">
+          <h3>Haus Schartner</h3>
+          <p>Familie Schartner</p>
+          <p>Moordörfl</p>
+          <p>5602 Wagrain</p>
+          <p>Email: xxx@gmail.com</p>
+          <p>Tel.: 06640000000</p>
+        </div>
+
+        <div class="footerContent">
+          <h3>Links</h3>
+          <ul>
+            <li><a href="index.html">Appartment</a></li>
+            <li><a href="index.html">Anfragen</a></li>
+            <li><a href="index.html">Über Wagrain</a></li>
+            <li><a href="index.html">Kontakt</a></li>
+          </ul>
+        </div>
+
+        <div class="footerContent">
+          <h3>Rechtliches</h3>
+          <ul>
+            <li><a href="index.html">AGB</a></li>
+            <li><a href="index.html">Datenschutz</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Barrier -->
+      <div class="bottomBarrier">
+        <p>&copy; 2024 Thomas Kreuzsaler. All rights reserved</p>
+      </div>
+    </footer>
+  </body>
+</html>
