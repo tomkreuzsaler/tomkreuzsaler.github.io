@@ -1,26 +1,27 @@
 :root {
-  --color-white: rgba(255, 255, 255, 0);
+  --color-white: rgb(255, 255, 255);
   --color-black: rgb(0, 0, 0);
-  --color-navbar-bg: rgba(101, 67, 33, 0.6);
+  --color-navbar-bg: rgba(101, 52, 33, 0.8);
   --color-parent-bg: rgba(255, 255, 255, 1);
   --color-child-bg: lightgray;
-  --color-footer-bg: rgba(101, 67, 33, 0.8);
-  --color-button-bg: rgba(0, 0, 0, 0);
+  --color-footer-bg: rgba(101, 67, 33, 1);
+  --color-button-bg: rgba(0, 0, 0, 0.1);
   --color-button-bg-hover: rgba(0, 0, 0, 0.8);
   --color-navbar-link: white;
 }
-
 html {
   scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
+  padding: 0;
   font-family: Arial, Helvetica, sans-serif;
+  background-size: cover;
 }
 
 section {
-  scroll-margin-top: 100px;
+  scroll-margin-top: 50px;
 }
 
 h1 {
@@ -46,43 +47,91 @@ h3 {
   margin: 0;
   margin-bottom: 5px;
 }
-
-/* Navigation Bar Styles */
-.navbar ul {
+/* Styles Navigationbar */
+nav {
   position: fixed;
-  top: 0;
   width: 100%;
-  height: 80px; /* Set the height of the navbar */
+  background-color: var(--color-navbar-bg);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+nav ul {
   margin: 0;
   padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav li {
+  height: 50px;
+}
+nav a {
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
   display: flex;
   align-items: center;
-  justify-content: center;
-  list-style-type: none;
-  background-color: var(--color-navbar-bg);
-  z-index: 10;
-}
-
-.navbar img {
-  height: 80px; /* Make the image fill the entire height of the navbar */
-  object-fit: cover; /* Ensure the image covers the space without distortion */
-  margin: 0;
-}
-
-.navbar a {
-  display: flex;
-  align-items: center; /* Vertically align text with the image */
-  margin: 20px;
-  color: var(--color-navbar-link);
-  text-decoration: none;
-  font-size: 20px;
-  text-transform: uppercase;
   text-align: center;
+  color: black;
+  text-transform: uppercase;
+}
+nav a:hover {
+  background-color: lightgray;
+}
+#nav-logo {
+  padding: 0;
 }
 
-.navbar a:hover {
+nav img {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  object-fit: fill;
+}
+/* Style for the left side (Logo) */
+nav li:first-child {
+  margin-right: auto; /* Pushes the logo to the left */
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
   background-color: var(--color-navbar-bg);
-  text-decoration: none;
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.sidebar li {
+  width: 100%;
+}
+.sidebar a {
+  width: 100%;
+}
+.menu-button {
+  display: none;
+}
+@media (max-width: 800px) {
+  .hideOnMobile {
+    display: none;
+  }
+  .menu-button {
+    display: block;
+  }
+}
+
+@media (max-width: 400px) {
+  .sidebar {
+    width: 100%;
+  }
 }
 
 /* Main Picture */
@@ -103,44 +152,40 @@ h3 {
   width: 100%;
   height: 100%;
 }
-
 .mainPicture h1 {
   position: absolute;
   z-index: 10;
   color: rgb(255, 255, 255);
   font-size: 6vw;
   text-align: left;
-  top: 20%;
+  top: 30%;
   left: 10%;
 }
-
 .mainPicture h2 {
   position: absolute;
   z-index: 10;
   color: rgb(255, 255, 255);
   font-size: 3vw;
   text-align: left;
-  top: 48%;
+  top: 58%;
   left: 10%;
   margin: 0px;
   padding: 0;
 }
-
 .mainPicture a {
   position: absolute;
-  padding: 10px;
+  padding: 1vw;
   z-index: 10;
   color: rgb(0, 0, 0);
   text-decoration: none;
   background-color: var(--color-footer-bg);
   border: 1px;
   border-radius: 5px;
-  font-size: 40px;
+  font-size: 3vw;
   text-align: left;
-  top: 60%;
+  top: 70%;
   left: 10%;
 }
-
 .mainPicture a:hover {
   background-color: grey;
 }
@@ -155,41 +200,38 @@ h3 {
   background-color: var(--color-child-bg);
 }
 
-/* Wave Container */
 .wave-container {
   position: relative;
   width: 100%;
   margin-top: 100px;
-  height: 250px; /* Height of the container */
+  height: 350px; /* Höhe des Containers */
   overflow: hidden;
 }
-
 .wave-container-mirrored {
   position: relative;
   width: 100%;
   margin-bottom: 100px;
-  height: 250px; /* Height of the container */
+  height: 350px; /* Höhe des Containers */
   overflow: hidden;
   transform: scaleY(-1);
 }
-
 .wave {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 250px; /* Height of the waves */
+  height: 100%; /* Höhe der Wellen */
 }
 
-/* Back Wave (lower level) */
+/* Hintere Welle (untere Ebene) */
 .wave-back {
   z-index: 1;
   background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 250"%3E%3Cpath fill="lightgray" fill-opacity="1" d="M0,192L48,186.7C96,181,192,171,288,144C384,117,480,75,576,69.3C672,64,768,96,864,128C960,160,1056,192,1152,202.7C1248,213,1344,203,1392,197.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"%3E%3C/path%3E%3C/svg%3E')
     no-repeat bottom;
   background-size: cover;
-  opacity: 0.3; /* Transparency */
+  opacity: 0.3; /* Transparenz */
 }
 
-/* Front Wave (upper level) */
+/* Vordere Welle (obere Ebene) */
 .wave-front {
   z-index: 2;
   background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 250"%3E%3Cpath fill="lightgray" fill-opacity="1" d="M0,160L48,144C96,128,192,96,288,112C384,128,480,192,576,218.7C672,245,768,235,864,192C960,149,1056,75,1152,69.3C1248,64,1344,128,1392,160L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"%3E%3C/path%3E%3C/svg%3E')
@@ -197,10 +239,10 @@ h3 {
   background-size: cover;
 }
 
-/* Style for Parent Flexbox */
+/* Style Parent Flexbox */
 .parent {
-  padding: 5%;
   margin: 0;
+  padding: 5%;
   width: 90%;
   background-color: var(--color-parent-bg);
   display: flex;
@@ -286,8 +328,8 @@ h3 {
 
 @media (max-width: 768px) {
   .slides {
-    pointer-events: none; /* Prevent interactions */
-    cursor: default; /* Change the cursor */
+    pointer-events: none; /* Verhindert Interaktionen */
+    cursor: default; /* Ändert den Mauszeiger */
   }
 }
 
@@ -305,12 +347,11 @@ h3 {
   background-color: var(--color-button-bg);
   border: none;
   color: var(--color-navbar-link);
-  padding: 30px;
+  padding: 20px;
   border-radius: 5px;
   cursor: pointer;
   z-index: 100;
 }
-
 .slider button:hover,
 .sliderSmall button:hover,
 .fullScreenSlider button:hover {
@@ -334,10 +375,10 @@ h3 {
   transform: translate(-50%, -50%);
   width: 75%;
   height: auto;
-  border-radius: 5px; /* Rounded corners */
-  overflow: hidden; /* Prevents content from spilling out of the slider */
-  background-color: rgba(0, 0, 0, 0.9); /* Dark background for the slider */
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Light shadow for design */
+  border-radius: 5px; /* Abgerundete Ecken */
+  overflow: hidden; /* Verhindert, dass der Inhalt außerhalb des Sliders sichtbar ist */
+  background-color: rgba(0, 0, 0, 0.9); /* Dunkler Hintergrund für den Slider */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Leichter Schatten für das Design */
 }
 
 .fullScreenSlides {
@@ -350,11 +391,11 @@ h3 {
 .fullScreenSlides img {
   width: 100%;
   height: auto;
-  display: none; /* Hidden by default */
+  display: none; /* Standardmäßig versteckt */
 }
 
 .fullScreenSlides img.active {
-  display: block; /* Show only the active slide */
+  display: block; /* Nur die aktive Folie anzeigen */
 }
 
 .fullScreenSlider .close {
@@ -369,12 +410,12 @@ h3 {
 
 /* Styles for Price Table */
 .price-table {
-  padding: 30px;
+  padding: 1vw;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: var(--color-child-bg);
   color: var(--color-black);
-  overflow-x: auto; /* Scroll on smaller screens */
+  overflow-x: auto; /* Scrollen bei kleineren Bildschirmen */
 }
 
 .price-table h3 {
@@ -385,13 +426,21 @@ h3 {
 .price-table table {
   width: 100%;
   border-collapse: collapse;
+  font-size: 65%;
 }
 
+@media (max-width: 768px) {
+  .price-table table {
+    font-size: 55%;
+   
+  }
+}
 .price-table th,
 .price-table td {
-  padding: 0.7vw;
   border: 1px solid var(--color-black);
   text-align: center;
+  padding: 5px;
+
 }
 
 .price-table th {
@@ -415,7 +464,7 @@ h3 {
 /* Styles for Contact Form */
 .contact-form {
   padding: 30px;
-  border-radius: 10px;
+  border-radius: 0px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: var(--color-child-bg);
 }
@@ -424,20 +473,24 @@ h3 {
   font-size: 18px;
   color: var(--color-black);
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 3px;
 }
 
 .contact-form input[type="text"],
 .contact-form input[type="email"],
 .contact-form input[type="tel"],
-.contact-form input[type="date"] {
+.contact-form input[type="date"],
+.contact-form input[type="number"],
+.contact-form select,
+.contact-form textarea {
   width: 100%;
   padding: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   border-radius: 5px;
   border: 1px solid var(--color-black);
   background-color: var(--color-parent-bg);
   font-size: 16px;
+  box-sizing: border-box; 
 }
 
 .contact-form button[type="submit"] {
@@ -457,24 +510,30 @@ h3 {
 .contact-form input[type="text"]::placeholder,
 .contact-form input[type="email"]::placeholder,
 .contact-form input[type="tel"]::placeholder,
-.contact-form input[type="date"]::placeholder {
+.contact-form input[type="date"]::placeholder,
+.contact-form input[type="number"]::placeholder,
+.contact-form textarea::placeholder {
   color: rgba(0, 0, 0, 0.5);
 }
 
 .contact-form input[type="text"]:focus,
 .contact-form input[type="email"]:focus,
 .contact-form input[type="tel"]:focus,
-.contact-form input[type="date"]:focus {
+.contact-form input[type="date"]:focus,
+.contact-form input[type="number"]:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
   outline: none;
   border-color: var(--color-navbar-bg);
 }
 
-/* Footer */
+/* footer */
 .footer {
   margin: 0px;
   padding: 10px;
   background-color: var(--color-footer-bg);
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-content: center;
 }
@@ -511,4 +570,5 @@ h3 {
   display: flex;
   justify-content: space-evenly;
   align-content: center;
+  text-align: center;
 }

@@ -5,53 +5,473 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <script src="scripts.js"></script>
-    <title>Kontakt</title>
+    <title>Haus Schartner</title>
   </head>
   <body>
-    <main>
-        <nav class="navbar">
-            <ul>
-              <li><a href="apartments.html">Appartments</a></li>
-              <li><a href="contact.html">Anfragen</a></li>
-              <li>
-                <a href="index.html" class="anchorPicture"
-                  ><img src="Pictures/Logo.PNG" alt="Logo"
-                /></a>
-              </li>
-              <li><a href="index.html">Über Wagrain</a></li>
-              <li><a href="index.html">Kontakt</a></li>
-            </ul>
-          </nav>
 
-   
-
-          <div class="parent" id="parentMarginTop">
-            <div class="child">
-             
-            </div>
+    <nav class="navbar">
+      <ul>
+        <li>
+          <a href="#sectionHome" class="anchorPicture">
+            <img src="Pictures/Logo.PNG" alt="Logo" />
+          </a>
+        </li>
+        <li><a href="#section1">Haus Schartner</a></li>
+        <li><a href="#section2">Appartments</a></li>
+        <li><a href="#section3">Anfragen und Kontakt</a></li>
+        <li><a href="#section4">Über Wagrain</a></li>
+      </ul>
+      <!-- Hamburger Menu Icon -->
+      <button class="navbar-toggle" aria-label="Toggle Navigation" onclick="showMenue()">
+        ☰
+      </button>
+    </nav>
     
-            <div class="child">
-              <form class="contact-form" id="contact-form">
-                <label for="start-date">Reisedatum von:</label>
-                <input type="date" id="start-date" name="start_date" required ><br><br>
-            
-                <label for="end-date">Reisedatum bis:</label>
-                <input type="date" id="end-date" name="end_date" required><br><br>
-            
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required ><br><br>
-            
-                <label for="tel">Telefon:</label>
-                <input type="tel" id="tel" name="tel" required><br><br>
-            
-                <label for="email">E-Mail:</label>
-                <input type="email" id="email" name="email" required><br><br>
-            
-                <button type="submit">Absenden</button>
-              </form>
+    <!-- Dropdown Menu for mobile -->
+    <div class="mobile-menu">
+      <ul>
+        <li><a href="#section1">Haus Schartner</a></li>
+        <li><a href="#section2">Appartments</a></li>
+        <li><a href="#section3">Anfragen und Kontakt</a></li>
+        <li><a href="#section4">Über Wagrain</a></li>
+      </ul>
+    </div>
+
+    <main>
+      <!-- Big Picture Slider -->
+      <div class="mainPicture" id="sectionHome">
+        <h1>
+          Haus Apartments <br />
+          Schartner
+        </h1>
+        <h2>Urlaub in der Salzburger Bergwelt!</h2>
+        <a href="#section3">Jetzt anfragen</a>
+        <img
+          src="Pictures/Index/HouseFront.jpg"
+          alt="HouseFront"
+          class="parent"
+        />
+      </div>
+
+      <!-- About Main Topic -->
+      <div class="parent" id="section1">
+        <div class="child1">
+          <h3>Herzlich Willkommen im Hause Schartner, in WAGRAIN!</h3>
+          <p>
+            Unser familienfreundliches Haus, liegt in sonniger Lage im Moadörfl
+            - Wagrain, 2,5 km von der Autobahnausfahrt Flachau entfernt! Die
+            ideale Lage für einen erholsamen, entspannenden oder aktiven Urlaub
+            für die ganze Familie.
+          </p>
+
+          <p>
+            Der besondere Reiz an unserem Haus liegt am direkten Einstieg in die
+            Salzburger Sportwelt Amadé, an der roten 8er Gondelbahn (Wagrainer
+            Höhenbahn).
+          </p>
+
+          <p>
+            In 300m Entfernung, führt die bestens präparierte, 120 km lange
+            Tauernloipe vorbei, die alles bietet was das Langlaufherz höher
+            schlagen lässt!
+          </p>
+        </div>
+
+        <div class="child1">
+          <h3>Herzlich Willkommen im Hause Schartner, in WAGRAIN!</h3>
+          <p>
+            Unser familienfreundliches Haus, liegt in sonniger Lage im Moadörfl
+            - Wagrain, 2,5 km von der Autobahnausfahrt Flachau entfernt! Die
+            ideale Lage für einen erholsamen, entspannenden oder aktiven Urlaub
+            für die ganze Familie.
+          </p>
+
+          <p>
+            Der besondere Reiz an unserem Haus liegt am direkten Einstieg in die
+            Salzburger Sportwelt Amadé, an der roten 8er Gondelbahn (Wagrainer
+            Höhenbahn).
+          </p>
+
+          <p>
+            In 300m Entfernung, führt die bestens präparierte, 120 km lange
+            Tauernloipe vorbei, die alles bietet was das Langlaufherz höher
+            schlagen lässt!
+          </p>
+        </div>
+      </div>
+
+      <!-- Map -->
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1351.3503449050438!2d13.342269419788455!3d47.35924128983485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4776d415f4caf37f%3A0xb4449ece59a68829!2sSchartner!5e0!3m2!1sde!2sat!4v1718529338184!5m2!1sde!2sat"
+          style="border: 0"
+          allowfullscreen="flase"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+
+      <section id="section2">
+        <!-- Hintere Welle -->
+        <div class="wave-container">
+          <!-- Hintere Welle -->
+          <div class="wave wave-back"></div>
+          <!-- Vordere Welle -->
+          <div class="wave wave-front"></div>
+        </div>
+
+        <div class="backgroundExclusive">
+          <h2>Unterkünfte</h2>
+          <!-- Full-screen slider for Pictures-->
+          <div id="fullScreenSlider" class="fullScreenSlider">
+            <span class="close" onclick="closeFullScreenSlider()">&times;</span>
+            <div class="fullScreenSlides"></div>
+            <button class="prev" onclick="changeFullScreenSlide(-1)">
+              &#10094;
+            </button>
+            <button class="next" onclick="changeFullScreenSlide(1)">
+              &#10095;
+            </button>
+          </div>
+
+          <!-- Topics -->
+          <!-- First Parent -->
+          <div class="parent">
+            <div class="child1">
+              <h3>Apartment 1</h3>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Inventore impedit, optio sint, quibusdam eos velit animi
+                obcaecati ullam neque amet dolorum ipsum asperiores odio saepe,
+                cum quidem quia mollitia! Rem?
+              </p>
+
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Inventore impedit, optio sint, quibusdam eos velit animi
+                obcaecati ullam neque amet dolorum ipsum asperiores odio saepe,
+                cum quidem quia mollitia! Rem?
+              </p>
+
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Inventore impedit, optio sint, quibusdam eos velit animi
+                obcaecati ullam neque amet dolorum ipsum asperiores odio saepe,
+                cum quidem quia mollitia! Rem?
+              </p>
+            </div>
+            <div class="child2">
+              <div class="sliderSmall" data-Slider-index="1">
+                <button
+                  class="prev"
+                  onclick="changeSlide(this.closest('.sliderSmall'), -1)"
+                >
+                  &#10094;
+                </button>
+                <div
+                  class="slides"
+                  onclick="openFullScreenSlider(this.closest('.sliderSmall'))"
+                >
+                  <img
+                    src="Pictures/Index/HouseFront.jpg"
+                    alt="HouseFront"
+                    class="slide"
+                  />
+                  <img
+                    src="Pictures/Index/ExampleImage1.jpg"
+                    alt="ImageExample1"
+                    class="slide"
+                  />
+                  <img
+                    src="Pictures/Index/ExampleImage2.jpg"
+                    alt="ImageExample2"
+                    class="slide"
+                  />
+                  <img
+                    src="Pictures/Index/ExampleImage3.jpg"
+                    alt="ImageExample3"
+                    class="slide"
+                  />
+                </div>
+                <button
+                  class="next"
+                  onclick="changeSlide(this.closest('.sliderSmall'), 1)"
+                >
+                  &#10095;
+                </button>
+              </div>
             </div>
           </div>
 
+          <!-- Second Parent -->
+          <div class="parent">
+            <div class="child2">
+              <div class="sliderSmall" data-Slider-index="2">
+                <button
+                  class="prev"
+                  onclick="changeSlide(this.closest('.sliderSmall'), -1)"
+                >
+                  &#10094;
+                </button>
+                <div
+                  class="slides"
+                  onclick="openFullScreenSlider(this.closest('.sliderSmall'))"
+                >
+                  <img
+                    src="Pictures/Index/HouseFront.jpg"
+                    alt="HouseFront"
+                    class="slide"
+                  />
+                  <img
+                    src="Pictures/Index/ExampleImage1.jpg"
+                    alt="ImageExample1"
+                    class="slide"
+                  />
+                  <img
+                    src="Pictures/Index/ExampleImage2.jpg"
+                    alt="ImageExample2"
+                    class="slide"
+                  />
+                  <img
+                    src="Pictures/Index/ExampleImage3.jpg"
+                    alt="ImageExample3"
+                    class="slide"
+                  />
+                </div>
+                <button
+                  class="next"
+                  onclick="changeSlide(this.closest('.sliderSmall'), 1)"
+                >
+                  &#10095;
+                </button>
+              </div>
+            </div>
+            <div class="child1">
+              <h3>Apartment 2</h3>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Inventore impedit, optio sint, quibusdam eos velit animi
+                obcaecati ullam neque amet dolorum ipsum asperiores odio saepe,
+                cum quidem quia mollitia! Rem?
+              </p>
+
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Inventore impedit, optio sint, quibusdam eos velit animi
+                obcaecati ullam neque amet dolorum ipsum asperiores odio saepe,
+                cum quidem quia mollitia! Rem?
+              </p>
+
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Inventore impedit, optio sint, quibusdam eos velit animi
+                obcaecati ullam neque amet dolorum ipsum asperiores odio saepe,
+                cum quidem quia mollitia! Rem?
+              </p>
+            </div>
+          </div>
+
+          <!-- Third Parent -->
+          <div class="parent">
+            <div class="child1">
+              <h3>Apartment 3</h3>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Inventore impedit, optio sint, quibusdam eos velit animi
+                obcaecati ullam neque amet dolorum ipsum asperiores odio saepe,
+                cum quidem quia mollitia! Rem?
+              </p>
+
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Inventore impedit, optio sint, quibusdam eos velit animi
+                obcaecati ullam neque amet dolorum ipsum asperiores odio saepe,
+                cum quidem quia mollitia! Rem?
+              </p>
+
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Inventore impedit, optio sint, quibusdam eos velit animi
+                obcaecati ullam neque amet dolorum ipsum asperiores odio saepe,
+                cum quidem quia mollitia! Rem?
+              </p>
+            </div>
+
+            <div class="child2">
+              <div class="sliderSmall" data-Slider-index="3">
+                <button
+                  class="prev"
+                  onclick="changeSlide(this.closest('.sliderSmall'), -1)"
+                >
+                  &#10094;
+                </button>
+                <div
+                  class="slides"
+                  onclick="openFullScreenSlider(this.closest('.sliderSmall'))"
+                >
+                  <img
+                    src="Pictures/Index/HouseFront.jpg"
+                    alt="HouseFront"
+                    class="slide"
+                  />
+                  <img
+                    src="Pictures/Index/ExampleImage1.jpg"
+                    alt="ImageExample1"
+                    class="slide"
+                  />
+                  <img
+                    src="Pictures/Index/ExampleImage2.jpg"
+                    alt="ImageExample2"
+                    class="slide"
+                  />
+                  <img
+                    src="Pictures/Index/ExampleImage3.jpg"
+                    alt="ImageExample3"
+                    class="slide"
+                  />
+                </div>
+                <button
+                  class="next"
+                  onclick="changeSlide(this.closest('.sliderSmall'), 1)"
+                >
+                  &#10095;
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="wave-container-mirrored">
+          <!-- Hintere Welle -->
+          <div class="wave wave-back"></div>
+
+          <!-- Vordere Welle -->
+          <div class="wave wave-front"></div>
+        </div>
+      </section>
+
+      <!-- Contact Form -->
+      <section id="section3">
+        <h2>Jetzt anfragen</h2>
+        <div class="parent">
+          <div class="child2">
+            <div class="price-table">
+              <h3>Preistabelle</h3>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Appartement</th>
+                    <th>Sommer 2024</th>
+                    <th>Winter 2024/2025</th>
+                    <th>Endreinigung</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Appartement I.</td>
+                    <td>ab € 68,00</td>
+                    <td>ab € 76,00 (2 Pers.)</td>
+                    <td rowspan="3">ab € 40,00 bis € 50,00</td>
+                  </tr>
+                  <tr>
+                    <td>Appartement II.</td>
+                    <td>ab € 120,00</td>
+                    <td>ab € 150,00 (4 Pers.)</td>
+                  </tr>
+                  <tr>
+                    <td>Garten Chalet</td>
+                    <td>
+                      Sommer 2024: ab € 130,00 (2 Pers.), ab € 200,00 (4 Pers.)
+                    </td>
+                    <td>
+                      Winter 2024/2025: ab € 165,00 (2 Pers.), ab € 245,00 (4
+                      Pers.)
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>
+                <a href="https://www.snow-space.com/Ticketshop" target="_blank"
+                  >Skipass zum Vorteilspreis checken!</a
+                >
+              </p>
+
+              <p>
+                Die Preise verstehen sich pro Appartement/Tag inkl. Wasser,
+                Strom, Heizung, Wäsche und exkl. Endreinigung und Ortstaxe -
+                ausgenommen Pauschalangebote!
+              </p>
+              <p>
+                Die Appartements werden nur wochenweise vermietet und sind ab
+                14.00 Uhr bezugsfertig! Haustiere sind nicht erwünscht!
+              </p>
+            </div>
+          </div>
+
+          <div class="child1">
+            <form class="contact-form" id="contact-form">
+              <label for="start-date">Reisedatum von:</label>
+              <input
+                type="date"
+                id="start-date"
+                name="start_date"
+                required
+              /><br /><br />
+
+              <label for="end-date">Reisedatum bis:</label>
+              <input
+                type="date"
+                id="end-date"
+                name="end_date"
+                required
+              /><br /><br />
+
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required /><br /><br />
+
+              <label for="tel">Telefon:</label>
+              <input type="tel" id="tel" name="tel" required /><br /><br />
+
+              <label for="email">E-Mail:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+              /><br /><br />
+
+              <button type="submit">Absenden</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- About Wagrain -->
+
+      <section id="section4">
+        <h2>Paradies im Sommer und Winter</h2>
+        <div class="parent" id="section4">
+          <div class="child2">
+            <img src="Pictures/Index/Slope.jpg" alt="Slope" />
+          </div>
+          <div class="child1">
+            <h3>Urlaub in Wagrain-Kleinarl</h3>
+            <p>
+              Erlebt den perfekten Urlaub in der atemberaubenden Bergwelt des
+              Salzburger Lands: majestätische Gipfel, soweit das Auge reicht und
+              herzliche Einheimische, die durch ihre Gastfreundschaft ein
+              unvergessliches Urlaubserlebnis schaffen.
+            </p>
+            <p>
+              Ganz gleich, wie das Wetter ist, Wagrain-Kleinarl bietet eine
+              Fülle an Aktivitäten und Veranstaltungen im Sommer wie im Winter.
+              Ob Wandern, Radfahren oder Skifahren, hier findet ihr Abwechslung
+              und Spaß für die ganze Familie oder den Freundeskreis.
+            </p>
+            <a href="https://www.wagrain-kleinarl.at/" target="_blank"
+              >Mehr über Wagrain-Kleinarl</a
+            >
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Footer -->
@@ -84,7 +504,6 @@
           </ul>
         </div>
       </div>
-
       <!-- Bottom Barrier -->
       <div class="bottomBarrier">
         <p>&copy; 2024 Thomas Kreuzsaler. All rights reserved</p>
@@ -92,3 +511,584 @@
     </footer>
   </body>
 </html>
+
+
+:root {
+  --color-white: rgba(255, 255, 255, 0);
+  --color-black: rgb(0, 0, 0);
+  --color-navbar-bg: rgba(101, 67, 33, 0.6);
+  --color-parent-bg: rgba(255, 255, 255, 1);
+  --color-child-bg: lightgray;
+  --color-footer-bg: rgba(101, 67, 33, 0.8);
+  --color-button-bg: rgba(0, 0, 0, 0);
+  --color-button-bg-hover: rgba(0, 0, 0, 0.8);
+  --color-navbar-link: white;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+section {
+  scroll-margin-top: 100px;
+}
+
+h1 {
+  color: var(--color-white);
+  text-align: center;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+h2 {
+  color: var(--color-black);
+  font-size: 50px;
+  text-align: center;
+  margin: 10px;
+  margin-top: 100px;
+  padding: 0;
+}
+
+h3 {
+  color: var(--color-black);
+  font-size: 25px;
+  text-align: left;
+  margin: 0;
+  margin-bottom: 5px;
+}
+/* Styles Navigationbar */
+.navbar ul {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  list-style-type: none;
+  background-color: var(--color-navbar-bg);
+  z-index: 10;
+  transition: height 0.3s ease;
+}
+
+/* Style for the left side (Logo) */
+.navbar ul li:first-child {
+  margin-right: auto; /* Pushes the logo to the left */
+}
+
+/* Style for the rest of the links */
+.navbar ul li:not(:first-child) {
+  margin: 0 40px; /* Space between links */
+}
+
+.navbar img {
+  height: 80px;
+  object-fit: cover;
+  margin: 0;
+}
+
+.navbar a {
+  display: flex;
+  align-items: center;
+  color: var(--color-navbar-link);
+  text-decoration: none;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.navbar a:hover {
+  background-color: var(--color-navbar-bg);
+  text-decoration: none;
+}
+
+/* Mobile Styles */
+.navbar-toggle {
+  display: none; /* Hidden by default */
+  position: fixed;
+  right: 20px;
+  top: 25px;
+  font-size: 40px;
+  background-color: transparent;
+  border: none;
+  color: var(--color-navbar-link);
+  cursor: pointer;
+  z-index: 20;
+}
+
+/* Hide menu on small screens */
+.mobile-menu {
+  display: none; /* Hidden by default */
+  position: fixed;
+  right: 0;
+  top: 80px;
+  background-color: var(--color-navbar-bg);
+  width: 200px;
+  height: 100vh;
+  z-index: 100;
+  transition: transform 0.3s ease;
+  transform: translateX(100%); /* Initially hidden off-screen */
+}
+
+.mobile-menu ul {
+  list-style-type: none;
+  padding: 20px;
+  margin: 0;
+}
+
+.mobile-menu ul li {
+  margin: 20px 0;
+}
+
+.mobile-menu ul li a {
+  color: var(--color-navbar-link);
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* Display dropdown when active */
+.mobile-menu.active {
+  transform: translateX(0); /* Slide in from right */
+}
+
+/* Responsive - Show hamburger and hide regular links */
+@media (max-width: 768px) {
+  .navbar ul li:not(:first-child) {
+    display: none; /* Hide menu items */
+  }
+
+  .navbar-toggle {
+    display: block; /* Show hamburger menu */
+  }
+
+  /* Adjust logo height */
+  .navbar img {
+    height: 60px;
+  }
+}
+/* Main Picture */
+.mainPicture {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  max-height: 100vh;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.mainPicture img {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+.mainPicture h1 {
+  position: absolute;
+  z-index: 10;
+  color: rgb(255, 255, 255);
+  font-size: 6vw;
+  text-align: left;
+  top: 20%;
+  left: 10%;
+}
+.mainPicture h2 {
+  position: absolute;
+  z-index: 10;
+  color: rgb(255, 255, 255);
+  font-size: 3vw;
+  text-align: left;
+  top: 48%;
+  left: 10%;
+  margin: 0px;
+  padding: 0;
+}
+.mainPicture a {
+  position: absolute;
+  padding: 10px;
+  z-index: 10;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  background-color: var(--color-footer-bg);
+  border: 1px;
+  border-radius: 5px;
+  font-size: 40px;
+  text-align: left;
+  top: 60%;
+  left: 10%;
+}
+.mainPicture a:hover {
+  background-color: grey;
+}
+
+
+/* Different Background */
+.backgroundExclusive h2 {
+  background-color: var(--color-child-bg);
+  margin: 0;
+}
+
+.backgroundExclusive div {
+  background-color: var(--color-child-bg);
+}
+
+.wave-container {
+  position: relative;
+  width: 100%;
+  margin-top: 100px;
+  height: 250px; /* Höhe des Containers */
+  overflow: hidden;
+}
+.wave-container-mirrored {
+  position: relative;
+  width: 100%;
+  margin-bottom: 100px;
+  height: 250px; /* Höhe des Containers */
+  overflow: hidden;
+  transform: scaleY(-1);
+}
+.wave {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 250px; /* Höhe der Wellen */
+}
+
+/* Hintere Welle (untere Ebene) */
+.wave-back {
+  z-index: 1;
+  background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 250"%3E%3Cpath fill="lightgray" fill-opacity="1" d="M0,192L48,186.7C96,181,192,171,288,144C384,117,480,75,576,69.3C672,64,768,96,864,128C960,160,1056,192,1152,202.7C1248,213,1344,203,1392,197.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"%3E%3C/path%3E%3C/svg%3E')
+    no-repeat bottom;
+  background-size: cover;
+  opacity: 0.3; /* Transparenz */
+}
+
+/* Vordere Welle (obere Ebene) */
+.wave-front {
+  z-index: 2;
+  background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 250"%3E%3Cpath fill="lightgray" fill-opacity="1" d="M0,160L48,144C96,128,192,96,288,112C384,128,480,192,576,218.7C672,245,768,235,864,192C960,149,1056,75,1152,69.3C1248,64,1344,128,1392,160L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"%3E%3C/path%3E%3C/svg%3E')
+    no-repeat bottom;
+  background-size: cover;
+}
+
+/* Style Parent Flexbox */
+.parent {
+  padding: 5%;
+  margin: 0;
+  width: 90%;
+  background-color: var(--color-parent-bg);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5%;
+}
+
+.child1 {
+  flex: 1;
+  min-width: 300px;
+  padding: 0;
+  font-size: 20px;
+}
+
+.child1 a {
+  color: var(--color-black);
+  text-decoration: none;
+}
+
+.child1 a:hover {
+  text-decoration: underline;
+}
+
+.child2 {
+  flex: 1;
+  min-width: 300px;
+  padding: 0;
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  .child1,
+  .child2 {
+    margin-top: 2%;
+  }
+
+  .child1 {
+    order: 1;
+  }
+
+  .child2 {
+    order: 2;
+  }
+}
+
+.parent p {
+  text-align: justify;
+}
+
+.parent img {
+  width: 100%;
+  height: auto;
+}
+
+.map iframe {
+  position: relative;
+  width: 100%;
+  height: 350px;
+}
+
+/* Slider */
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-height: 100vh;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.sliderSmall {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .slides {
+    pointer-events: none; /* Verhindert Interaktionen */
+    cursor: default; /* Ändert den Mauszeiger */
+  }
+}
+
+.slide {
+  min-width: 100%;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slider button,
+.sliderSmall button,
+.fullScreenSlider button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--color-button-bg);
+  border: none;
+  color: var(--color-navbar-link);
+  padding: 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 100;
+}
+.slider button:hover,
+.sliderSmall button:hover,
+.fullScreenSlider button:hover {
+  background-color: var(--color-button-bg-hover);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.fullScreenSlider {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  height: auto;
+  border-radius: 5px; /* Abgerundete Ecken */
+  overflow: hidden; /* Verhindert, dass der Inhalt außerhalb des Sliders sichtbar ist */
+  background-color: rgba(0, 0, 0, 0.9); /* Dunkler Hintergrund für den Slider */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Leichter Schatten für das Design */
+}
+
+.fullScreenSlides {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.fullScreenSlides img {
+  width: 100%;
+  height: auto;
+  display: none; /* Standardmäßig versteckt */
+}
+
+.fullScreenSlides img.active {
+  display: block; /* Nur die aktive Folie anzeigen */
+}
+
+.fullScreenSlider .close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Styles for Price Table */
+.price-table {
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: var(--color-child-bg);
+  color: var(--color-black);
+  overflow-x: auto; /* Scrollen bei kleineren Bildschirmen */
+}
+
+.price-table h3 {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.price-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.price-table th,
+.price-table td {
+  padding: 0.7vw;
+  border: 1px solid var(--color-black);
+  text-align: center;
+}
+
+.price-table th {
+  background-color: var(--color-button-bg);
+  color: var(--color-navbar-link);
+}
+
+.price-table tbody tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.price-table a {
+  color: var(--color-navbar-link);
+  text-decoration: none;
+}
+
+.price-table a:hover {
+  text-decoration: underline;
+}
+
+/* Styles for Contact Form */
+.contact-form {
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: var(--color-child-bg);
+}
+
+.contact-form label {
+  font-size: 18px;
+  color: var(--color-black);
+  display: block;
+  margin-bottom: 10px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid var(--color-black);
+  background-color: var(--color-parent-bg);
+  font-size: 16px;
+}
+
+.contact-form button[type="submit"] {
+  width: 100%;
+  padding: 15px;
+  background-color: var(--color-button-bg);
+  color: var(--color-navbar-link);
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button[type="submit"]:hover {
+  background-color: var(--color-button-bg-hover);
+}
+
+.contact-form input[type="text"]::placeholder,
+.contact-form input[type="email"]::placeholder,
+.contact-form input[type="tel"]::placeholder,
+.contact-form input[type="date"]::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form input[type="tel"]:focus,
+.contact-form input[type="date"]:focus {
+  outline: none;
+  border-color: var(--color-navbar-bg);
+}
+
+/* footer */
+.footer {
+  margin: 0px;
+  padding: 10px;
+  background-color: var(--color-footer-bg);
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.footer h3 {
+  margin: 5px 0px;
+}
+
+.footer div {
+  margin: 0px 50px;
+}
+
+.footer p {
+  margin: 0;
+  padding: 0;
+}
+
+.footer ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.footer a {
+  padding: 0;
+  color: var(--color-black);
+  text-decoration: none;
+}
+
+.bottomBarrier {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-footer-bg);
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+}
