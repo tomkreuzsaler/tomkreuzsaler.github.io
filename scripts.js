@@ -128,6 +128,8 @@ document.addEventListener('DOMContentLoaded', function() {
     emailjs.send('service_j4z66zl', 'template_zplu5ai', formData)
       .then(function(response) {
         console.log('SUCCESS!', response.status, response.text);
+        document.getElementById('contact-form').reset(); // Clear form fields
+        document.getElementById('success-message').classList.add('show'); // Show success message
       }, function(error) {
         alert('Failed to send the form. Please try again.');
         console.log('FAILED...', error);

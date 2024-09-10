@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <script src="scripts.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
     <script type="text/javascript">
-      (function(){
+      (function () {
         emailjs.init("8rndlyjk9y3z1CUer");
-
       })();
     </script>
-
-
 
     <title>Haus Schartner</title>
   </head>
@@ -39,10 +39,12 @@
             </svg>
           </a>
         </li>
-        <li><a href="#section1">Haus Schartner</a></li>
-        <li><a href="#section2">Appartments</a></li>
-        <li><a href="#section3">Anfragen und Kontakt</a></li>
-        <li><a href="#section4">Über Wagrain</a></li>
+        <li onclick="hideSidebar()"><a href="#section1">Haus Schartner</a></li>
+        <li onclick="hideSidebar()"><a href="#section2">Appartments</a></li>
+        <li onclick="hideSidebar()">
+          <a href="#section3">Anfragen und Kontakt</a>
+        </li>
+        <li onclick="hideSidebar()"><a href="#section4">Über Wagrain</a></li>
       </ul>
       <!-------DESKTOP NAVIGATION------->
       <ul>
@@ -79,12 +81,14 @@
     <main>
       <!-------MAIN THEME PICTURE------->
       <div class="mainPicture" id="sectionHome">
-        <h1>
-          Haus Apartments <br />
-          Schartner
-        </h1>
-        <h2>Urlaub in der Salzburger Bergwelt!</h2>
-        <a href="#section3">Jetzt anfragen</a>
+        <div>
+          <h1>
+            Haus Apartments <br />
+            Schartner
+          </h1>
+          <h2>Urlaub in der Salzburger Bergwelt!</h2>
+          <a href="#section3">Jetzt anfragen</a>
+        </div>
         <img
           src="Pictures/Index/HouseFront.jpg"
           alt="HouseFront"
@@ -118,7 +122,7 @@
           </div>
 
           <div class="child1">
-            <h3>Herzlich Willkommen im Hause Schartner, in WAGRAIN!</h3>
+            <h3>Benefits:</h3>
             <p>
               Unser familienfreundliches Haus, liegt in sonniger Lage im
               Moadörfl - Wagrain, 2,5 km von der Autobahnausfahrt Flachau
@@ -153,15 +157,15 @@
       </section>
 
       <!-------MAIN TOPICS------->
-      <section id="section2">
-        <!-- Hintere Welle -->
-        <div class="wave-container">
-          <!-- Hintere Welle -->
-          <div class="wave wave-back"></div>
-          <!-- Vordere Welle -->
-          <div class="wave wave-front"></div>
-        </div>
 
+      <!-- Hintere Welle -->
+      <div class="wave-container">
+        <!-- Hintere Welle -->
+        <div class="wave wave-back"></div>
+        <!-- Vordere Welle -->
+        <div class="wave wave-front"></div>
+      </div>
+      <section id="section2">
         <div class="backgroundExclusive">
           <h2>Unterkünfte</h2>
           <!-- Full-screen slider for Pictures-->
@@ -391,6 +395,15 @@
         </div>
       </section>
 
+      <!-------GOOGLE MAP------->
+      <div class="full-width-picture">
+        <img src="Pictures/Index/Mountain.jpg" alt="Mountain">
+        <div>
+          <h1>Atemberaubende Berge.</h1>
+          <h2>Unübertroffene Pisten.</h2>
+        </div>
+      </div>
+ 
       <!-------CONTACT FORM------->
       <section id="section3">
         <h2>Jetzt anfragen</h2>
@@ -446,6 +459,10 @@
                 Die Appartements werden nur wochenweise vermietet und sind ab
                 14.00 Uhr bezugsfertig! Haustiere sind nicht erwünscht!
               </p>
+              <h3>Kontakt</h3>
+              <p>Heidi und Josef Schartner</p>
+              <p>Tel.: 0664/ 6666666</p>
+              <p>Email: xxx@gmail.com</p>
             </div>
           </div>
 
@@ -453,49 +470,70 @@
             <form class="contact-form" id="contact-form">
               <!-- First date selection -->
               <label for="start-date">Datum Vom:</label>
-              <input type="date" id="start-date" name="start_date" required /><br /><br />
-          
+              <input
+                type="date"
+                id="start-date"
+                name="start_date"
+                required
+              /><br />
+
               <label for="end-date">Datum Bis:</label>
-              <input type="date" id="end-date" name="end_date" required /><br /><br />
-          
+              <input type="date" id="end-date" name="end_date" required /><br />
+
               <!-- Apartment selection -->
               <label for="apartment">Gewünschtes Appartement:</label>
               <select id="apartment" name="apartment" required>
                 <option value="">-- Bitte wählen --</option>
                 <option value="Apartment 1">Apartment 1</option>
                 <option value="Apartment 2">Apartment 2</option>
-                <option value="Gartenchalets">Gartenchalets</option>
-              </select><br /><br />
-          
+                <option value="Gartenchalets">Gartenchalets</option></select
+              ><br />
+
               <!-- Number of adults and children -->
               <label for="adults">Anzahl Erwachsene:</label>
-              <input type="number" id="adults" name="adults" min="1" required /><br /><br />
-          
+              <input
+                type="number"
+                id="adults"
+                name="adults"
+                min="1"
+                required
+              /><br />
+
               <label for="children">Anzahl Kinder:</label>
-              <input type="number" id="children" name="children" min="0" /><br /><br />
-          
+              <input
+                type="number"
+                id="children"
+                name="children"
+                min="0"
+              /><br />
+
               <!-- Contact Information -->
               <label for="name">Name:</label>
-              <input type="text" id="name" name="name" required /><br /><br />
-          
+              <input type="text" id="name" name="name" required /><br />
+
               <label for="street">Strasse:</label>
-              <input type="text" id="street" name="street" required /><br /><br />
-          
+              <input type="text" id="street" name="street" required /><br />
+
               <label for="city">Stadt:</label>
-              <input type="text" id="city" name="city" required /><br /><br />
-          
+              <input type="text" id="city" name="city" required /><br />
+
               <label for="tel">Telefon:</label>
-              <input type="tel" id="tel" name="tel" required /><br /><br />
-          
+              <input type="tel" id="tel" name="tel" required /><br />
+
               <label for="email">E-Mail:</label>
-              <input type="email" id="email" name="email" required /><br /><br />
-          
+              <input type="email" id="email" name="email" required /><br />
+
               <!-- Comments Section -->
               <label for="comments">Anmerkungen:</label>
-              <textarea id="comments" name="comments" rows="4"></textarea><br /><br />
-          
+              <textarea id="comments" name="comments" rows="4"></textarea><br />
+
               <button type="submit">Absenden</button>
             </form>
+
+            <div id="success-message" class="success-message">
+              Anfrage wurde gesendet!
+              <span class="checkmark">&#10003;</span>
+            </div>
           </div>
         </div>
       </section>
@@ -544,13 +582,11 @@
         <div class="footerContent">
           <h3>Links</h3>
           <ul>
-            
             <li><a href="#sectionHome">Home</a></li>
             <li><a href="#section1">Haus Schartner</a></li>
             <li><a href="#section2">Appartment</a></li>
             <li><a href="#section3">Anfragen</a></li>
             <li><a href="#section4">Über Wagrain</a></li>
-            
           </ul>
         </div>
 

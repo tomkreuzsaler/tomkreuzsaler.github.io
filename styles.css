@@ -1,13 +1,10 @@
 :root {
-  --color-white: rgb(255, 255, 255);
-  --color-black: rgb(0, 0, 0);
-  --color-navbar-bg: rgba(101, 52, 33, 0.8);
-  --color-parent-bg: rgba(255, 255, 255, 1);
-  --color-child-bg: lightgray;
-  --color-footer-bg: rgba(101, 67, 33, 1);
-  --color-button-bg: rgba(0, 0, 0, 0.1);
-  --color-button-bg-hover: rgba(0, 0, 0, 0.8);
-  --color-navbar-link: white;
+  --light-text-color: rgb(255, 255, 255);
+  --dark-text-color: rgb(0, 0, 0);
+  --color-main: rgba(165, 83, 25, 0.7);
+  --color-sencondary: rgb(189, 183, 165);
+  --color-call-to-action:rgb(142, 56, 56)  ;
+  --color: rgb(103, 45, 0);
 }
 html {
   scroll-behavior: smooth;
@@ -24,15 +21,19 @@ section {
   scroll-margin-top: 50px;
 }
 
+#section2 img:hover{
+  cursor: pointer;
+}
+
 h1 {
-  color: var(--color-white);
+  color: var(--light-text-color);
   text-align: center;
   margin: 0;
   margin-bottom: 5px;
 }
 
 h2 {
-  color: var(--color-black);
+  color: var(--dark-text-color);
   font-size: 50px;
   text-align: center;
   margin: 10px;
@@ -41,7 +42,7 @@ h2 {
 }
 
 h3 {
-  color: var(--color-black);
+  color: var(--dark-text-color);
   font-size: 25px;
   text-align: left;
   margin: 0;
@@ -51,7 +52,8 @@ h3 {
 nav {
   position: fixed;
   width: 100%;
-  background-color: var(--color-navbar-bg);
+  background-color: var(--color-main);
+  opacity: 1;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
   z-index: 999;
 }
@@ -65,7 +67,7 @@ nav ul {
   align-items: center;
 }
 nav li {
-  height: 50px;
+  height: 60px;
 }
 nav a {
   height: 100%;
@@ -74,7 +76,7 @@ nav a {
   display: flex;
   align-items: center;
   text-align: center;
-  color: black;
+  color: var(--dark-text-color);
   text-transform: uppercase;
 }
 nav a:hover {
@@ -102,7 +104,7 @@ nav li:first-child {
   height: 100vh;
   width: 250px;
   z-index: 999;
-  background-color: var(--color-navbar-bg);
+  background-color: var(--color-main);
   backdrop-filter: blur(10px);
   box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
   display: none;
@@ -139,7 +141,7 @@ nav li:first-child {
   position: relative;
   padding: 0;
   margin: 0;
-  width: 100%;
+  width: auto;
   height: 100%;
   max-height: 100vh;
   overflow: hidden;
@@ -152,52 +154,70 @@ nav li:first-child {
   width: 100%;
   height: 100%;
 }
-.mainPicture h1 {
+.mainPicture div {
   position: absolute;
+  margin: 0;
+  margin-top: 60px;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5vw;
+
+}
+.mainPicture h1 {
+  position: relative;
+  margin: 0;
+  padding: 0;
   z-index: 10;
-  color: rgb(255, 255, 255);
+  color: var(--light-text-color);
   font-size: 6vw;
   text-align: left;
-  top: 30%;
-  left: 10%;
 }
 .mainPicture h2 {
-  position: absolute;
+  position: relative;
+  margin: 0;
+  padding: 0;
   z-index: 10;
-  color: rgb(255, 255, 255);
+  color: var(--light-text-color);
   font-size: 3vw;
   text-align: left;
-  top: 58%;
-  left: 10%;
-  margin: 0px;
-  padding: 0;
 }
 .mainPicture a {
-  position: absolute;
-  padding: 1vw;
+  position: relative;
+  padding: 1vw 2vw;
   z-index: 10;
-  color: rgb(0, 0, 0);
+  color: var(--light-text-color);
   text-decoration: none;
-  background-color: var(--color-footer-bg);
-  border: 1px;
-  border-radius: 5px;
-  font-size: 3vw;
-  text-align: left;
-  top: 70%;
-  left: 10%;
+  background-color: var(--color-call-to-action);
+  border: 2px solid black;
+  border-radius: 8px;
+  font-size:  min(5vw, 30px);
+  text-align: center;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
 }
+
 .mainPicture a:hover {
-  background-color: grey;
+  background-color: lightgray;
+  color: var(--color-call-to-action);
+  transform: scale(1.05);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4);
 }
+
 
 /* Different Background */
 .backgroundExclusive h2 {
-  background-color: var(--color-child-bg);
+  background-color: var(--color-sencondary);
   margin: 0;
 }
 
 .backgroundExclusive div {
-  background-color: var(--color-child-bg);
+  background-color: var(--color-sencondary);
 }
 
 .wave-container {
@@ -225,7 +245,7 @@ nav li:first-child {
 /* Hintere Welle (untere Ebene) */
 .wave-back {
   z-index: 1;
-  background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 250"%3E%3Cpath fill="lightgray" fill-opacity="1" d="M0,192L48,186.7C96,181,192,171,288,144C384,117,480,75,576,69.3C672,64,768,96,864,128C960,160,1056,192,1152,202.7C1248,213,1344,203,1392,197.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"%3E%3C/path%3E%3C/svg%3E')
+  background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 250"%3E%3Cpath fill="rgb(189, 183, 165)" fill-opacity="1" d="M0,192L48,186.7C96,181,192,171,288,144C384,117,480,75,576,69.3C672,64,768,96,864,128C960,160,1056,192,1152,202.7C1248,213,1344,203,1392,197.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"%3E%3C/path%3E%3C/svg%3E')
     no-repeat bottom;
   background-size: cover;
   opacity: 0.3; /* Transparenz */
@@ -234,7 +254,7 @@ nav li:first-child {
 /* Vordere Welle (obere Ebene) */
 .wave-front {
   z-index: 2;
-  background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 250"%3E%3Cpath fill="lightgray" fill-opacity="1" d="M0,160L48,144C96,128,192,96,288,112C384,128,480,192,576,218.7C672,245,768,235,864,192C960,149,1056,75,1152,69.3C1248,64,1344,128,1392,160L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"%3E%3C/path%3E%3C/svg%3E')
+  background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 250"%3E%3Cpath fill="rgb(189, 183, 165)" fill-opacity="1" d="M0,160L48,144C96,128,192,96,288,112C384,128,480,192,576,218.7C672,245,768,235,864,192C960,149,1056,75,1152,69.3C1248,64,1344,128,1392,160L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"%3E%3C/path%3E%3C/svg%3E')
     no-repeat bottom;
   background-size: cover;
 }
@@ -244,7 +264,7 @@ nav li:first-child {
   margin: 0;
   padding: 5%;
   width: 90%;
-  background-color: var(--color-parent-bg);
+  background-color: white;
   display: flex;
   flex-wrap: wrap;
   gap: 5%;
@@ -258,7 +278,7 @@ nav li:first-child {
 }
 
 .child1 a {
-  color: var(--color-black);
+  color: var(--dark-text-color);
   text-decoration: none;
 }
 
@@ -319,8 +339,14 @@ nav li:first-child {
   height: auto;
   overflow: hidden;
   z-index: 0;
+  
 }
-
+.sliderSmall img{
+  transition: ease 0.3s;
+ }
+.sliderSmall img:hover {
+ transform: scale(1.05);
+}
 .slides {
   display: flex;
   transition: transform 0.5s ease-in-out;
@@ -344,9 +370,10 @@ nav li:first-child {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: var(--color-button-bg);
+  background-color: black;
+  opacity: 0.4;
   border: none;
-  color: var(--color-navbar-link);
+  color: white;
   padding: 20px;
   border-radius: 5px;
   cursor: pointer;
@@ -355,7 +382,7 @@ nav li:first-child {
 .slider button:hover,
 .sliderSmall button:hover,
 .fullScreenSlider button:hover {
-  background-color: var(--color-button-bg-hover);
+  opacity: 0.7;
 }
 
 .prev {
@@ -377,7 +404,7 @@ nav li:first-child {
   height: auto;
   border-radius: 5px; /* Abgerundete Ecken */
   overflow: hidden; /* Verhindert, dass der Inhalt außerhalb des Sliders sichtbar ist */
-  background-color: rgba(0, 0, 0, 0.9); /* Dunkler Hintergrund für den Slider */
+  background-color: black; /* Dunkler Hintergrund für den Slider */
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Leichter Schatten für das Design */
 }
 
@@ -402,19 +429,62 @@ nav li:first-child {
   position: absolute;
   top: 20px;
   right: 35px;
-  color: #fff;
+  color: var(--light-text-color);
   font-size: 40px;
   font-weight: bold;
   cursor: pointer;
 }
 
+
+/* -----Picture over whole Screen----- */
+
+.full-width-picture{
+  position: relative;
+  width: 100%;
+  height: 40vw;
+  min-height: 250px;
+  display: flex;
+  overflow: hidden; 
+}
+
+.full-width-picture img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  object-position: center; 
+}
+.full-width-picture div{
+  position: absolute;
+  margin-top: 10vw;
+  left: 10%; 
+}
+.full-width-picture h1{
+  position: relative;
+  margin: 0;
+  padding: 0;
+  z-index: 10;
+  color: var(--light-text-color);
+  font-size: 6vw;
+  text-align: left;
+}
+.full-width-picture h2{
+  position: relative;
+  margin: 0;
+  padding: 0;
+  z-index: 10;
+  color: var(--light-text-color);
+  font-size: 3vw;
+  text-align: left;
+}
 /* Styles for Price Table */
 .price-table {
-  padding: 1vw;
+  height: fit-content;
+  min-height: 96%;
+  padding: 4%;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: var(--color-child-bg);
-  color: var(--color-black);
+  background-color: var(--color-sencondary);
+  color: var(--dark-text-color);
   overflow-x: auto; /* Scrollen bei kleineren Bildschirmen */
 }
 
@@ -426,26 +496,24 @@ nav li:first-child {
 .price-table table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 65%;
+  font-size:  max(1.5vw, 10px);
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .price-table table {
     font-size: 55%;
-   
   }
-}
+} */
 .price-table th,
 .price-table td {
-  border: 1px solid var(--color-black);
+  border: 1px solid black;
   text-align: center;
   padding: 5px;
-
 }
 
 .price-table th {
-  background-color: var(--color-button-bg);
-  color: var(--color-navbar-link);
+  background-color: var(--color-sencondary);
+  color: var(--light-text-color);
 }
 
 .price-table tbody tr:nth-child(even) {
@@ -453,7 +521,7 @@ nav li:first-child {
 }
 
 .price-table a {
-  color: var(--color-navbar-link);
+  color: var(--light-text-color);
   text-decoration: none;
 }
 
@@ -463,17 +531,20 @@ nav li:first-child {
 
 /* Styles for Contact Form */
 .contact-form {
-  padding: 30px;
-  border-radius: 0px;
+  height: 96%;
+  margin-bottom: 50px;
+  padding: 4%;
+  border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: var(--color-child-bg);
+  background-color: var(--color-sencondary);
 }
 
 .contact-form label {
-  font-size: 18px;
-  color: var(--color-black);
+  font-size: 14px;
+  color: var(--dark-text-color);
   display: block;
-  margin-bottom: 3px;
+  margin-bottom: 2px;
+
 }
 
 .contact-form input[type="text"],
@@ -485,26 +556,26 @@ nav li:first-child {
 .contact-form textarea {
   width: 100%;
   padding: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   border-radius: 5px;
   border: 1px solid var(--color-black);
-  background-color: var(--color-parent-bg);
-  font-size: 16px;
-  box-sizing: border-box; 
+  background-color: white;
+  font-size: 14px;
+  box-sizing: border-box;
 }
 
 .contact-form button[type="submit"] {
   width: 100%;
   padding: 15px;
-  background-color: var(--color-button-bg);
-  color: var(--color-navbar-link);
+  background-color: var(--color-call-to-action);
+  color: var(--light-text-color);
   font-size: 18px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  
 }
 
 .contact-form button[type="submit"]:hover {
-  background-color: var(--color-button-bg-hover);
+  transform: scale(1.01); 
 }
 
 .contact-form input[type="text"]::placeholder,
@@ -524,14 +595,30 @@ nav li:first-child {
 .contact-form textarea:focus,
 .contact-form select:focus {
   outline: none;
-  border-color: var(--color-navbar-bg);
+  border-color: black;
 }
+
+.success-message {
+  display: none;
+  color: green;
+  font-size: 20px;
+  font-weight: bold;
+}
+.success-message.show {
+  display: block;
+}
+.checkmark {
+  color: green;
+  font-size: 24px;
+  margin-left: 10px;
+}
+
 
 /* footer */
 .footer {
   margin: 0px;
   padding: 10px;
-  background-color: var(--color-footer-bg);
+  background-color: var(--color-main);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -559,14 +646,14 @@ nav li:first-child {
 
 .footer a {
   padding: 0;
-  color: var(--color-black);
+  color: var(--dark-text-color);
   text-decoration: none;
 }
 
 .bottomBarrier {
   margin: 0;
   padding: 0;
-  background-color: var(--color-footer-bg);
+  background-color: var(--color-main);
   display: flex;
   justify-content: space-evenly;
   align-content: center;
