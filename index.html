@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="scripts.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("8rndlyjk9y3z1CUer");
+      })();
+    </script>
+
+    <title>Haus Schartner</title>
+  </head>
+
+  <header>
+    <!-------NAVIGATION BAR------->
+
+    <nav>
+      <!-------SIDEBAR ON MOBILE------->
+      <ul class="sidebar">
+        <li onclick="hideSidebar()">
+          <a>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="26px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="black"
+            >
+              <path
+                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+              />
+            </svg>
+          </a>
+        </li>
+        <li onclick="hideSidebar()"><a href="#section1">Haus Schartner</a></li>
+        <li onclick="hideSidebar()"><a href="#section2">Appartments</a></li>
+        <li onclick="hideSidebar()">
+          <a href="#section3">Anfragen und Kontakt</a>
+        </li>
+        <li onclick="hideSidebar()"><a href="#section4">Über Wagrain</a></li>
+      </ul>
+      <!-------DESKTOP NAVIGATION------->
+      <ul>
+        <li>
+          <a href="#sectionHome" id="nav-logo">
+            <img src="Pictures/Logo.PNG" alt="Logo" />
+          </a>
+        </li>
+        <li class="hideOnMobile"><a href="#section1">Haus Schartner</a></li>
+        <li class="hideOnMobile"><a href="#section2">Appartments</a></li>
+        <li class="hideOnMobile">
+          <a href="#section3">Anfragen und Kontakt</a>
+        </li>
+        <li class="hideOnMobile"><a href="#section4">Über Wagrain</a></li>
+        <li class="menu-button" onclick="showSidebar()">
+          <a
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="26px"
+              viewBox="0 -960 960 960"
+              width="26px"
+              fill="black"
+            >
+              <path
+                d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+              />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <body>
+    <main>
+      <!-------MAIN THEME PICTURE------->
+      <div class="mainPicture" id="sectionHome">
+        <div>
+          <h1>
+            Haus Apartments <br />
+            Schartner
+          </h1>
+          <h2>Urlaub in der Salzburger Bergwelt!</h2>
+          <a href="#section3">Jetzt anfragen</a>
+        </div>
+        <img
+          src="Pictures/Index/HouseFront.jpg"
+          alt="HouseFront"
+          class="parent"
+        />
+      </div>
+
+      <!-------MAIN TEXT------->
+      <section id="section1">
+        <div class="parent">
+          <div class="child1">
+            <h3>Herzlich Willkommen im Hause Schartner, in WAGRAIN!</h3>
+            <p>
+              Unser familienfreundliches Haus, liegt in sonniger Lage im
+              Moadörfl - Wagrain, 2,5 km von der Autobahnausfahrt Flachau
+              entfernt! Die ideale Lage für einen erholsamen, entspannenden oder
+              aktiven Urlaub für die ganze Familie.
+            </p>
+
+            <p>
+              Der besondere Reiz an unserem Haus liegt am direkten Einstieg in
+              die Salzburger Sportwelt Amadé, an der roten 8er Gondelbahn
+              (Wagrainer Höhenbahn).
+            </p>
+
+            <p>
+              In 300m Entfernung, führt die bestens präparierte, 120 km lange
+              Tauernloipe vorbei, die alles bietet was das Langlaufherz höher
+              schlagen lässt!
+            </p>
+          </div>
+
+          <div class="child1">
+            <h3>Benefits:</h3>
+            <p>
+              Unser familienfreundliches Haus, liegt in sonniger Lage im
+              Moadörfl - Wagrain, 2,5 km von der Autobahnausfahrt Flachau
+              entfernt! Die ideale Lage für einen erholsamen, entspannenden oder
+              aktiven Urlaub für die ganze Familie.
+            </p>
+
+            <p>
+              Der besondere Reiz an unserem Haus liegt am direkten Einstieg in
+              die Salzburger Sportwelt Amadé, an der roten 8er Gondelbahn
+              (Wagrainer Höhenbahn).
+            </p>
+
+            <p>
+              In 300m Entfernung, führt die bestens präparierte, 120 km lange
+              Tauernloipe vorbei, die alles bietet was das Langlaufherz höher
+              schlagen lässt!
+            </p>
+          </div>
+        </div>
+
+        <!-------GOOGLE MAP------->
+        <div class="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1351.3503449050438!2d13.342269419788455!3d47.35924128983485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4776d415f4caf37f%3A0xb4449ece59a68829!2sSchartner!5e0!3m2!1sde!2sat!4v1718529338184!5m2!1sde!2sat"
+            style="border: 0"
+            allowfullscreen="flase"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </section>
+
+      <!-------MAIN TOPICS------->
+
+      <!-- Hintere Welle -->
+      <div class="wave-container">
+        <!-- Hintere Welle -->
+        <div class="wave wave-back"></div>
+        <!-- Vordere Welle -->
+        <div class="wave wave-front"></div>
+      </div>
+      <section id="section2">
+        <div class="backgroundExclusive">
+          <h2>Unterkünfte</h2>
+          <!-- Full-screen slider for Pictures-->
+          <div id="fullScreenSlider" class="fullScreenSlider">
+            <span class="close" onclick="closeFullScreenSlider()">&times;</span>
+            <div class="fullScreenSlides"></div>
+            <button class="prev" onclick="changeFullScreenSlide(-1)">
+              &#10094;
+            </button>
+            <button class="next" onclick="changeFullScreenSlide(1)">
+              &#10095;
+            </button>
+          </div>
+
+          <!-- Topics -->
+          <!-- First Parent -->
+          <div class="parent">
+            <div class="child1">
+              <h3>Apartment 1</h3>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Inventore impedit, optio sint, quibusdam eos velit animi
+                obcaecati ullam neque amet dolorum ipsum asperiores odio saepe,
+                cum quidem quia mollitia! Rem?
+              </p>
+
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Inventore impedit, optio sint, quibusdam eos velit animi
+                obcaecati ullam neque amet dolorum ipsum asperiores odio saepe,
+                cum quidem quia mollitia! Rem?
+              </p>
+
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Inventore impedit, optio sint, quibusdam eos velit animi
+                obcaecati ullam neque amet dolorum ipsum asperiores odio saepe,
+                cum quidem quia mollitia! Rem?
+              </p>
+            </div>
+            <div class="child2">
+              <div class="sliderSmall" data-Slider-index="1">
+                <button
+                  class="prev"
+                  onclick="changeSlide(this.closest('.sliderSmall'), -1)"
+                >
+                  &#10094;
+                </button>
+                <div
+                  class="slides"
+                  onclick="openFullScreenSlider(this.closest('.sliderSmall'))"
+                >
+                  <img
+                    src="Pictures/Index/HouseFront.jpg"
+                    alt="HouseFront"
+                    class="slide"
+                  />
+                  <img
+                    src="Pictures/Index/ExampleImage1.jpg"
+                    alt="ImageExample1"
+                    class="slide"
+                  />
+                  <img
+                    src="Pictures/Index/ExampleImage2.jpg"
+                    alt="ImageExample2"
+                    class="slide"
+                  />
+                  <img
+                    src="Pictures/Index/ExampleImage3.jpg"
+                    alt="ImageExample3"
+                    class="slide"
+                  />
+                </div>
+                <button
+                  class="next"
+                  onclick="changeSlide(this.closest('.sliderSmall'), 1)"
+                >
+                  &#10095;
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Second Parent -->
+          <div class="parent">
+            <div class="child2">
+              <div class="sliderSmall" data-Slider-index="2">
+                <button
+                  class="prev"
+                  onclick="changeSlide(this.closest('.sliderSmall'), -1)"
+                >
+                  &#10094;
+                </button>
+                <div
+                  class="slides"
+                  onclick="openFullScreenSlider(this.closest('.sliderSmall'))"
+                >
+                  <img
+                    src="Pictures/Index/HouseFront.jpg"
+                    alt="HouseFront"
+                    class="slide"
+                  />
+                  <img
+                    src="Pictures/Index/ExampleImage1.jpg"
+                    alt="ImageExample1"
+                    class="slide"
+                  />
+                  <img
+                    src="Pictures/Index/ExampleImage2.jpg"
+                    alt="ImageExample2"
+                    class="slide"
+                  />
+                  <img
+                    src="Pictures/Index/ExampleImage3.jpg"
+                    alt="ImageExample3"
+                    class="slide"
+                  />
+                </div>
+                <button
+                  class="next"
+                  onclick="changeSlide(this.closest('.sliderSmall'), 1)"
+                >
+                  &#10095;
+                </button>
+              </div>
+            </div>
+            <div class="child1">
+              <h3>Apartment 2</h3>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Inventore impedit, optio sint, quibusdam eos velit animi
+                obcaecati ullam neque amet dolorum ipsum asperiores odio saepe,
+                cum quidem quia mollitia! Rem?
+              </p>
+
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Inventore impedit, optio sint, quibusdam eos velit animi
+                obcaecati ullam neque amet dolorum ipsum asperiores odio saepe,
+                cum quidem quia mollitia! Rem?
+              </p>
+
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Inventore impedit, optio sint, quibusdam eos velit animi
+                obcaecati ullam neque amet dolorum ipsum asperiores odio saepe,
+                cum quidem quia mollitia! Rem?
+              </p>
+            </div>
+          </div>
+
+          <!-- Third Parent -->
+          <div class="parent">
+            <div class="child1">
+              <h3>Apartment 3</h3>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Inventore impedit, optio sint, quibusdam eos velit animi
+                obcaecati ullam neque amet dolorum ipsum asperiores odio saepe,
+                cum quidem quia mollitia! Rem?
+              </p>
+
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Inventore impedit, optio sint, quibusdam eos velit animi
+                obcaecati ullam neque amet dolorum ipsum asperiores odio saepe,
+                cum quidem quia mollitia! Rem?
+              </p>
+
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Inventore impedit, optio sint, quibusdam eos velit animi
+                obcaecati ullam neque amet dolorum ipsum asperiores odio saepe,
+                cum quidem quia mollitia! Rem?
+              </p>
+            </div>
+
+            <div class="child2">
+              <div class="sliderSmall" data-Slider-index="3">
+                <button
+                  class="prev"
+                  onclick="changeSlide(this.closest('.sliderSmall'), -1)"
+                >
+                  &#10094;
+                </button>
+                <div
+                  class="slides"
+                  onclick="openFullScreenSlider(this.closest('.sliderSmall'))"
+                >
+                  <img
+                    src="Pictures/Index/HouseFront.jpg"
+                    alt="HouseFront"
+                    class="slide"
+                  />
+                  <img
+                    src="Pictures/Index/ExampleImage1.jpg"
+                    alt="ImageExample1"
+                    class="slide"
+                  />
+                  <img
+                    src="Pictures/Index/ExampleImage2.jpg"
+                    alt="ImageExample2"
+                    class="slide"
+                  />
+                  <img
+                    src="Pictures/Index/ExampleImage3.jpg"
+                    alt="ImageExample3"
+                    class="slide"
+                  />
+                </div>
+                <button
+                  class="next"
+                  onclick="changeSlide(this.closest('.sliderSmall'), 1)"
+                >
+                  &#10095;
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="wave-container-mirrored">
+          <!-- Hintere Welle -->
+          <div class="wave wave-back"></div>
+
+          <!-- Vordere Welle -->
+          <div class="wave wave-front"></div>
+        </div>
+      </section>
+
+      <!-------GOOGLE MAP------->
+      <div class="full-width-picture">
+        <img src="Pictures/Index/Mountain.jpg" alt="Mountain">
+        <div>
+          <h1>Atemberaubende Berge.</h1>
+          <h2>Unübertroffene Pisten.</h2>
+        </div>
+      </div>
+ 
+      <!-------CONTACT FORM------->
+      <section id="section3">
+        <h2>Jetzt anfragen</h2>
+        <div class="parent">
+          <div class="child2">
+            <div class="price-table">
+              <h3>Preistabelle</h3>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Appartement</th>
+                    <th>Sommer 2024</th>
+                    <th>Winter 2024/2025</th>
+                    <th>Endreinigung</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Appartement I.</td>
+                    <td>ab € 68,00</td>
+                    <td>ab € 76,00 (2 Pers.)</td>
+                    <td rowspan="3">ab € 40,00 bis € 50,00</td>
+                  </tr>
+                  <tr>
+                    <td>Appartement II.</td>
+                    <td>ab € 120,00</td>
+                    <td>ab € 150,00 (4 Pers.)</td>
+                  </tr>
+                  <tr>
+                    <td>Garten Chalet</td>
+                    <td>
+                      Sommer 2024: ab € 130,00 (2 Pers.), ab € 200,00 (4 Pers.)
+                    </td>
+                    <td>
+                      Winter 2024/2025: ab € 165,00 (2 Pers.), ab € 245,00 (4
+                      Pers.)
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>
+                <a href="https://www.snow-space.com/Ticketshop" target="_blank"
+                  >Skipass zum Vorteilspreis checken!</a
+                >
+              </p>
+
+              <p>
+                Die Preise verstehen sich pro Appartement/Tag inkl. Wasser,
+                Strom, Heizung, Wäsche und exkl. Endreinigung und Ortstaxe -
+                ausgenommen Pauschalangebote!
+              </p>
+              <p>
+                Die Appartements werden nur wochenweise vermietet und sind ab
+                14.00 Uhr bezugsfertig! Haustiere sind nicht erwünscht!
+              </p>
+              <h3>Kontakt</h3>
+              <p>Heidi und Josef Schartner</p>
+              <p>Tel.: 0664/ 6666666</p>
+              <p>Email: xxx@gmail.com</p>
+            </div>
+          </div>
+
+          <div class="child1">
+            <form class="contact-form" id="contact-form">
+              <!-- First date selection -->
+              <label for="start-date">Datum Vom:</label>
+              <input
+                type="date"
+                id="start-date"
+                name="start_date"
+                required
+              /><br />
+
+              <label for="end-date">Datum Bis:</label>
+              <input type="date" id="end-date" name="end_date" required /><br />
+
+              <!-- Apartment selection -->
+              <label for="apartment">Gewünschtes Appartement:</label>
+              <select id="apartment" name="apartment" required>
+                <option value="">-- Bitte wählen --</option>
+                <option value="Apartment 1">Apartment 1</option>
+                <option value="Apartment 2">Apartment 2</option>
+                <option value="Gartenchalets">Gartenchalets</option></select
+              ><br />
+
+              <!-- Number of adults and children -->
+              <label for="adults">Anzahl Erwachsene:</label>
+              <input
+                type="number"
+                id="adults"
+                name="adults"
+                min="1"
+                required
+              /><br />
+
+              <label for="children">Anzahl Kinder:</label>
+              <input
+                type="number"
+                id="children"
+                name="children"
+                min="0"
+              /><br />
+
+              <!-- Contact Information -->
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required /><br />
+
+              <label for="street">Strasse:</label>
+              <input type="text" id="street" name="street" required /><br />
+
+              <label for="city">Stadt:</label>
+              <input type="text" id="city" name="city" required /><br />
+
+              <label for="tel">Telefon:</label>
+              <input type="tel" id="tel" name="tel" required /><br />
+
+              <label for="email">E-Mail:</label>
+              <input type="email" id="email" name="email" required /><br />
+
+              <!-- Comments Section -->
+              <label for="comments">Anmerkungen:</label>
+              <textarea id="comments" name="comments" rows="4"></textarea><br />
+
+              <button type="submit">Absenden</button>
+            </form>
+
+            <div id="success-message" class="success-message">
+              Anfrage wurde gesendet!
+              <span class="checkmark">&#10003;</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-------ABOUT WAGRAIN------->
+      <section id="section4">
+        <h2>Paradies im Sommer und Winter</h2>
+        <div class="parent" id="section4">
+          <div class="child2">
+            <img src="Pictures/Index/Slope.jpg" alt="Slope" />
+          </div>
+          <div class="child1">
+            <h3>Urlaub in Wagrain-Kleinarl</h3>
+            <p>
+              Erlebt den perfekten Urlaub in der atemberaubenden Bergwelt des
+              Salzburger Lands: majestätische Gipfel, soweit das Auge reicht und
+              herzliche Einheimische, die durch ihre Gastfreundschaft ein
+              unvergessliches Urlaubserlebnis schaffen.
+            </p>
+            <p>
+              Ganz gleich, wie das Wetter ist, Wagrain-Kleinarl bietet eine
+              Fülle an Aktivitäten und Veranstaltungen im Sommer wie im Winter.
+              Ob Wandern, Radfahren oder Skifahren, hier findet ihr Abwechslung
+              und Spaß für die ganze Familie oder den Freundeskreis.
+            </p>
+            <a href="https://www.wagrain-kleinarl.at/" target="_blank"
+              >Mehr über Wagrain-Kleinarl</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-------FOOTER------->
+    <footer>
+      <div class="footer">
+        <div class="footerContent">
+          <h3>Haus Schartner</h3>
+          <p>Familie Schartner</p>
+          <p>Moordörfl</p>
+          <p>5602 Wagrain</p>
+          <p>Email: xxx@gmail.com</p>
+          <p>Tel.: 06640000000</p>
+        </div>
+
+        <div class="footerContent">
+          <h3>Links</h3>
+          <ul>
+            <li><a href="#sectionHome">Home</a></li>
+            <li><a href="#section1">Haus Schartner</a></li>
+            <li><a href="#section2">Appartment</a></li>
+            <li><a href="#section3">Anfragen</a></li>
+            <li><a href="#section4">Über Wagrain</a></li>
+          </ul>
+        </div>
+
+        <div class="footerContent">
+          <h3>Rechtliches</h3>
+          <ul>
+            <li><a href="index.html">AGB</a></li>
+            <li><a href="index.html">Datenschutz</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Bottom Barrier -->
+      <div class="bottomBarrier">
+        <p>&copy; 2024 Thomas Kreuzsaler. All rights reserved</p>
+      </div>
+    </footer>
+  </body>
+</html>
