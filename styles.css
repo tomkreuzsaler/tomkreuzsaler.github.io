@@ -48,7 +48,9 @@ h3 {
   margin: 0;
   margin-bottom: 5px;
 }
-/* Styles Navigationbar */
+
+
+/*-----STYLES FOR NAVIGATIONBAR-----*/
 nav {
   position: fixed;
   width: 100%;
@@ -67,7 +69,7 @@ nav ul {
   align-items: center;
 }
 nav li {
-  height: 60px;
+  height: 55px;
 }
 nav a {
   height: 100%;
@@ -92,11 +94,13 @@ nav img {
   height: 100%;
   object-fit: fill;
 }
-/* Style for the left side (Logo) */
+
 nav li:first-child {
-  margin-right: auto; /* Pushes the logo to the left */
+  margin-right: auto; 
 }
 
+
+/*-----SIDEBAR FOR SMALL DEVICES-----*/
 .sidebar {
   position: fixed;
   top: 0;
@@ -107,10 +111,12 @@ nav li:first-child {
   background-color: var(--color-main);
   backdrop-filter: blur(10px);
   box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-  display: none;
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  transform: translateX(100%);
+  transition: transform ease-in-out 0.25s;
 }
 .sidebar li {
   width: 100%;
@@ -121,22 +127,9 @@ nav li:first-child {
 .menu-button {
   display: none;
 }
-@media (max-width: 800px) {
-  .hideOnMobile {
-    display: none;
-  }
-  .menu-button {
-    display: block;
-  }
-}
 
-@media (max-width: 400px) {
-  .sidebar {
-    width: 100%;
-  }
-}
 
-/* Main Picture */
+/*-----Main Picture/ HERO SECTION-----*/
 .mainPicture {
   position: relative;
   padding: 0;
@@ -209,8 +202,8 @@ nav li:first-child {
   box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4);
 }
 
-
-/* Different Background */
+/*-----Style for Main Topics-----*/
+/*-----Different Background-----*/
 .backgroundExclusive h2 {
   background-color: var(--color-sencondary);
   margin: 0;
@@ -220,18 +213,19 @@ nav li:first-child {
   background-color: var(--color-sencondary);
 }
 
+/*-----WAVE DESIGN-----*/
 .wave-container {
   position: relative;
   width: 100%;
   margin-top: 100px;
-  height: 350px; /* Höhe des Containers */
+  height: 350px; 
   overflow: hidden;
 }
 .wave-container-mirrored {
   position: relative;
   width: 100%;
   margin-bottom: 100px;
-  height: 350px; /* Höhe des Containers */
+  height: 350px; 
   overflow: hidden;
   transform: scaleY(-1);
 }
@@ -239,19 +233,17 @@ nav li:first-child {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 100%; /* Höhe der Wellen */
+  height: 100%; 
 }
 
-/* Hintere Welle (untere Ebene) */
 .wave-back {
   z-index: 1;
   background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 250"%3E%3Cpath fill="rgb(189, 183, 165)" fill-opacity="1" d="M0,192L48,186.7C96,181,192,171,288,144C384,117,480,75,576,69.3C672,64,768,96,864,128C960,160,1056,192,1152,202.7C1248,213,1344,203,1392,197.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"%3E%3C/path%3E%3C/svg%3E')
     no-repeat bottom;
   background-size: cover;
-  opacity: 0.3; /* Transparenz */
+  opacity: 0.3; 
 }
 
-/* Vordere Welle (obere Ebene) */
 .wave-front {
   z-index: 2;
   background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 250"%3E%3Cpath fill="rgb(189, 183, 165)" fill-opacity="1" d="M0,160L48,144C96,128,192,96,288,112C384,128,480,192,576,218.7C672,245,768,235,864,192C960,149,1056,75,1152,69.3C1248,64,1344,128,1392,160L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"%3E%3C/path%3E%3C/svg%3E')
@@ -259,7 +251,7 @@ nav li:first-child {
   background-size: cover;
 }
 
-/* Style Parent Flexbox */
+/*-----FLEXBOX-----*/
 .parent {
   margin: 0;
   padding: 5%;
@@ -293,21 +285,6 @@ nav li:first-child {
   font-size: 20px;
 }
 
-@media (max-width: 768px) {
-  .child1,
-  .child2 {
-    margin-top: 2%;
-  }
-
-  .child1 {
-    order: 1;
-  }
-
-  .child2 {
-    order: 2;
-  }
-}
-
 .parent p {
   text-align: justify;
 }
@@ -323,7 +300,7 @@ nav li:first-child {
   height: 350px;
 }
 
-/* Slider */
+/*-----SLIDER-----*/
 .slider {
   position: relative;
   width: 100%;
@@ -350,13 +327,6 @@ nav li:first-child {
 .slides {
   display: flex;
   transition: transform 0.5s ease-in-out;
-}
-
-@media (max-width: 768px) {
-  .slides {
-    pointer-events: none; /* Verhindert Interaktionen */
-    cursor: default; /* Ändert den Mauszeiger */
-  }
 }
 
 .slide {
@@ -393,6 +363,7 @@ nav li:first-child {
   right: 10px;
 }
 
+/*-----Full Screen Slider-----*/
 .fullScreenSlider {
   display: none;
   position: fixed;
@@ -402,10 +373,10 @@ nav li:first-child {
   transform: translate(-50%, -50%);
   width: 75%;
   height: auto;
-  border-radius: 5px; /* Abgerundete Ecken */
-  overflow: hidden; /* Verhindert, dass der Inhalt außerhalb des Sliders sichtbar ist */
-  background-color: black; /* Dunkler Hintergrund für den Slider */
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Leichter Schatten für das Design */
+  border-radius: 5px; 
+  overflow: hidden; 
+  background-color: black; 
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); 
 }
 
 .fullScreenSlides {
@@ -418,11 +389,11 @@ nav li:first-child {
 .fullScreenSlides img {
   width: 100%;
   height: auto;
-  display: none; /* Standardmäßig versteckt */
+  display: none; 
 }
 
 .fullScreenSlides img.active {
-  display: block; /* Nur die aktive Folie anzeigen */
+  display: block; 
 }
 
 .fullScreenSlider .close {
@@ -436,30 +407,44 @@ nav li:first-child {
 }
 
 
-/* -----Picture over whole Screen----- */
-
-.full-width-picture{
+/*-----Picture over whole Screen for a break in the Layout-----*/
+.full-width-pictures-frame {
   position: relative;
   width: 100%;
   height: 40vw;
   min-height: 250px;
-  display: flex;
-  overflow: hidden; 
 }
 
-.full-width-picture img{
+.full-width-pictures {
+  display: flex;
+  width: 200%; /* 100% for each slide (2 slides -> 200%) */
+  height: 100%;
+  animation: slideShow 15s infinite;
+  transform: translateX(0); /* Ensure starting position */
+  
+}
+
+.full-width-picture {
+  position: relative;
+  height: 100%;
+  flex: 1 0 50%; /* Each slide takes up 50% of the width */
+  justify-content: center;
+  align-items: center;
+}
+
+.full-width-picture img {
   width: 100%;
   height: 100%;
-  object-fit: cover; 
-  object-position: center; 
+  object-fit: cover;
 }
-.full-width-picture div{
+
+.full-width-picture-text {
   position: absolute;
-  margin-top: 10vw;
-  left: 10%; 
+  left: 10%;
+  top: 20%;
 }
-.full-width-picture h1{
-  position: relative;
+
+.full-width-picture h1 {
   margin: 0;
   padding: 0;
   z-index: 10;
@@ -467,8 +452,8 @@ nav li:first-child {
   font-size: 6vw;
   text-align: left;
 }
-.full-width-picture h2{
-  position: relative;
+
+.full-width-picture h2 {
   margin: 0;
   padding: 0;
   z-index: 10;
@@ -476,7 +461,9 @@ nav li:first-child {
   font-size: 3vw;
   text-align: left;
 }
-/* Styles for Price Table */
+
+
+/*-----Styles for Price Table-----*/
 .price-table {
   height: fit-content;
   min-height: 96%;
@@ -485,7 +472,7 @@ nav li:first-child {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: var(--color-sencondary);
   color: var(--dark-text-color);
-  overflow-x: auto; /* Scrollen bei kleineren Bildschirmen */
+  overflow-x: auto; 
 }
 
 .price-table h3 {
@@ -499,11 +486,7 @@ nav li:first-child {
   font-size:  max(1.5vw, 10px);
 }
 
-/* @media (max-width: 768px) {
-  .price-table table {
-    font-size: 55%;
-  }
-} */
+
 .price-table th,
 .price-table td {
   border: 1px solid black;
@@ -529,7 +512,8 @@ nav li:first-child {
   text-decoration: underline;
 }
 
-/* Styles for Contact Form */
+
+/*-----Styles for Contact Form-----*/
 .contact-form {
   height: 96%;
   margin-bottom: 50px;
@@ -614,7 +598,7 @@ nav li:first-child {
 }
 
 
-/* footer */
+/*-----footer-----*/
 .footer {
   margin: 0px;
   padding: 10px;
@@ -658,4 +642,64 @@ nav li:first-child {
   justify-content: space-evenly;
   align-content: center;
   text-align: center;
+}
+
+
+/*-----MEDIA QUERYS-----*/
+@media (max-width: 768px) {
+  /*-----NAV BAR-----*/
+  .hideOnMobile {
+    display: none;
+  }
+  .menu-button {
+    display: block;
+  }
+
+  /*-----SLIDER-----*/
+  .slides {
+    pointer-events: none; 
+    cursor: default; 
+  }
+
+  /*-----MAIN TOPICS-----*/
+  .child1,
+  .child2 {
+    margin-top: 2%;
+  }
+
+  .child1 {
+    order: 1;
+  }
+
+  .child2 {
+    order: 2;
+  }
+}
+
+@media (max-width: 414px) {
+
+  .sidebar {
+    width: 100%;
+  }
+}
+
+
+/*-----ANIMAIONS-----*/
+/* Keyframes for fill width Picture animation */
+@keyframes slideShow {
+  0% {
+    transform: translateX(0); 
+  }
+  25% {
+    transform: translateX(0%); 
+  }
+  50% {
+    transform: translateX(-50%); 
+  }
+  75% {
+    transform: translateX(-50%); 
+  }
+  100% {
+    transform: translateX(0); 
+  }
 }

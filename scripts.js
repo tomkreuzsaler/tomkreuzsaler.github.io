@@ -1,4 +1,17 @@
 
+// -----SIDEBAR-----
+function showSidebar(){
+  const sidebar = document.querySelector('.sidebar')
+  sidebar.style.transform = 'translateX(0%)'
+}
+
+function hideSidebar(){
+const sidebar = document.querySelector('.sidebar')
+sidebar.style.transform = 'translateX(100%)'
+}
+
+
+// ----INIT SLIDERS-----
 document.addEventListener("DOMContentLoaded", () => {
   const sliders = document.querySelectorAll(".slider");
 
@@ -14,19 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
     changeSlide(sliderSmall, 0);
   });
 });
-
-
-// -----SIDEBAR-----
-function showSidebar(){
-  const sidebar = document.querySelector('.sidebar')
-  sidebar.style.display = 'flex'
-}
-
-function hideSidebar(){
-const sidebar = document.querySelector('.sidebar')
-sidebar.style.display = 'none'
-}
-
 
 // -----SLIDER CHANGE SLIDE-----
 function changeSlide(sliderContainer, direction) {
@@ -52,39 +52,36 @@ function changeSlide(sliderContainer, direction) {
   sliderContainer.dataset.currentSlide = currentSlide;
 }
 
-
 // -----FULLSCREENSLIDER-----
-// Funktion zum Öffnen des Fullscreen-Sliders
 function openFullScreenSlider(sliderSmall) {
   const fullScreenSlider = document.getElementById("fullScreenSlider");
   const fullScreenSlides = fullScreenSlider.querySelector(".fullScreenSlides");
 
+  // Get current Slide ID from Small Slider
   const currentSlides = sliderSmall.querySelectorAll(".slide");
-  const currentSlide = parseInt(sliderSmall.dataset.currentSlide); // Hol den aktuellen Slide-Index vom kleinen Slider
+  const currentSlide = parseInt(sliderSmall.dataset.currentSlide); 
 
   fullScreenSlides.innerHTML = "";
   currentSlides.forEach((slide, index) => {
     const img = document.createElement("img");
     img.src = slide.src;
     img.alt = slide.alt;
-    img.dataset.index = index; // Füge ein data-Attribut hinzu, um den Index zu speichern
+    img.dataset.index = index; 
     if (index === currentSlide) {
-      img.classList.add("active"); // Verwende eine CSS-Klasse für den aktuellen Slide
+      img.classList.add("active"); 
     }
     fullScreenSlides.appendChild(img);
   });
 
-  fullScreenSlider.dataset.currentSlider = sliderSmall.dataset.smallSliderIndex; // Speichere den Index des aktuellen Sliders
+  fullScreenSlider.dataset.currentSlider = sliderSmall.dataset.smallSliderIndex; 
   fullScreenSlider.style.display = "block";
 }
 
-// Funktion zum Schließen des Fullscreen-Sliders
 function closeFullScreenSlider() {
   const fullScreenSlider = document.getElementById("fullScreenSlider");
   fullScreenSlider.style.display = "none";
 }
 
-// Funktion zum Ändern der Folien im Fullscreen-Slider
 function changeFullScreenSlide(direction) {
   const fullScreenSlider = document.getElementById("fullScreenSlider");
   const fullScreenSlides = fullScreenSlider.querySelectorAll(
@@ -104,7 +101,6 @@ function changeFullScreenSlide(direction) {
 
 
 // -----CONTACT FORM EMAIJS-----
-
 document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();  // Prevent the form from submitting normally

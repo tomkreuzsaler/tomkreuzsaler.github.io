@@ -20,7 +20,6 @@
 
   <header>
     <!-------NAVIGATION BAR------->
-
     <nav>
       <!-------SIDEBAR ON MOBILE------->
       <ul class="sidebar">
@@ -46,6 +45,7 @@
         </li>
         <li onclick="hideSidebar()"><a href="#section4">Über Wagrain</a></li>
       </ul>
+
       <!-------DESKTOP NAVIGATION------->
       <ul>
         <li>
@@ -77,6 +77,7 @@
       </ul>
     </nav>
   </header>
+
   <body>
     <main>
       <!-------MAIN THEME PICTURE------->
@@ -157,30 +158,25 @@
       </section>
 
       <!-------MAIN TOPICS------->
-
-      <!-- Hintere Welle -->
       <div class="wave-container">
-        <!-- Hintere Welle -->
         <div class="wave wave-back"></div>
-        <!-- Vordere Welle -->
         <div class="wave wave-front"></div>
       </div>
       <section id="section2">
+        <!-- Full-screen slider for Pictures-->
+        <div id="fullScreenSlider" class="fullScreenSlider">
+          <span class="close" onclick="closeFullScreenSlider()">&times;</span>
+          <div class="fullScreenSlides"></div>
+          <button class="prev" onclick="changeFullScreenSlide(-1)">
+            &#10094;
+          </button>
+          <button class="next" onclick="changeFullScreenSlide(1)">
+            &#10095;
+          </button>
+        </div>
+
         <div class="backgroundExclusive">
           <h2>Unterkünfte</h2>
-          <!-- Full-screen slider for Pictures-->
-          <div id="fullScreenSlider" class="fullScreenSlider">
-            <span class="close" onclick="closeFullScreenSlider()">&times;</span>
-            <div class="fullScreenSlides"></div>
-            <button class="prev" onclick="changeFullScreenSlide(-1)">
-              &#10094;
-            </button>
-            <button class="next" onclick="changeFullScreenSlide(1)">
-              &#10095;
-            </button>
-          </div>
-
-          <!-- Topics -->
           <!-- First Parent -->
           <div class="parent">
             <div class="child1">
@@ -386,31 +382,43 @@
             </div>
           </div>
         </div>
-        <div class="wave-container-mirrored">
-          <!-- Hintere Welle -->
-          <div class="wave wave-back"></div>
 
-          <!-- Vordere Welle -->
+        <div class="wave-container-mirrored">
+          <div class="wave wave-back"></div>
           <div class="wave wave-front"></div>
         </div>
       </section>
 
-      <!-------GOOGLE MAP------->
-      <div class="full-width-picture">
-        <img src="Pictures/Index/Mountain.jpg" alt="Mountain">
-        <div>
-          <h1>Atemberaubende Berge.</h1>
-          <h2>Unübertroffene Pisten.</h2>
+      <!-------FULL WIDTH PICTURE------->
+      <div class="full-width-pictures-frame">
+        <div class="full-width-pictures">
+          <!-- Slide 1 -->
+          <div class="full-width-picture">
+            <img src="Pictures/Index/MountainWinter.jpg" alt="Mountain Winter" />
+            <div class="full-width-picture-text">
+              <h1>Atemberaubende Berge.</h1>
+              <h2>Unübertroffene Pisten.</h2>
+            </div>
+          </div>
+      
+          <!-- Slide 2 -->
+          <div class="full-width-picture">
+            <img src="Pictures/Index/MountainSummer.jpg" alt="Mountain Summer" />
+            <div class="full-width-picture-text">
+              <h1>Unvergleichliche Wanderlandschaften.</h1>
+              <h2>Immer etwas Neues zu erkunden.</h2>
+            </div>
+          </div>
         </div>
       </div>
- 
-      <!-------CONTACT FORM------->
+      <!-------PRICE TABLE/ CONTACT DATA AND FORM------->
       <section id="section3">
         <h2>Jetzt anfragen</h2>
         <div class="parent">
           <div class="child2">
             <div class="price-table">
               <h3>Preistabelle</h3>
+
               <table>
                 <thead>
                   <tr>
@@ -444,12 +452,12 @@
                   </tr>
                 </tbody>
               </table>
+
               <p>
                 <a href="https://www.snow-space.com/Ticketshop" target="_blank"
                   >Skipass zum Vorteilspreis checken!</a
                 >
               </p>
-
               <p>
                 Die Preise verstehen sich pro Appartement/Tag inkl. Wasser,
                 Strom, Heizung, Wäsche und exkl. Endreinigung und Ortstaxe -
@@ -468,15 +476,10 @@
 
           <div class="child1">
             <form class="contact-form" id="contact-form">
-              <!-- First date selection -->
+              <!-- Date from-to -->
               <label for="start-date">Datum Vom:</label>
-              <input
-                type="date"
-                id="start-date"
-                name="start_date"
-                required
-              /><br />
-
+              <input type="date" id="start-date" name="start_date" required />
+              <br />
               <label for="end-date">Datum Bis:</label>
               <input type="date" id="end-date" name="end_date" required /><br />
 
@@ -486,26 +489,18 @@
                 <option value="">-- Bitte wählen --</option>
                 <option value="Apartment 1">Apartment 1</option>
                 <option value="Apartment 2">Apartment 2</option>
-                <option value="Gartenchalets">Gartenchalets</option></select
-              ><br />
+                <option value="Gartenchalets">Gartenchalets</option>
+              </select>
+              <br />
 
               <!-- Number of adults and children -->
               <label for="adults">Anzahl Erwachsene:</label>
-              <input
-                type="number"
-                id="adults"
-                name="adults"
-                min="1"
-                required
-              /><br />
+              <input type="number" id="adults" name="adults" min="1" required />
+              <br />
 
               <label for="children">Anzahl Kinder:</label>
-              <input
-                type="number"
-                id="children"
-                name="children"
-                min="0"
-              /><br />
+              <input type="number" id="children" name="children" min="0" />
+              <br />
 
               <!-- Contact Information -->
               <label for="name">Name:</label>
@@ -598,7 +593,8 @@
           </ul>
         </div>
       </div>
-      <!-- Bottom Barrier -->
+
+      <!-----Bottom Barrier----->
       <div class="bottomBarrier">
         <p>&copy; 2024 Thomas Kreuzsaler. All rights reserved</p>
       </div>
