@@ -413,6 +413,7 @@ nav li:first-child {
   width: 100%;
   height: 40vw;
   min-height: 250px;
+  overflow: hidden;
 }
 
 .full-width-pictures {
