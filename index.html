@@ -5,21 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <script src="scripts.js"></script>
+    <script src="translation.js"></script>
+    <!-- -----EMAIL JS----- -->
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
     ></script>
+    <!-- -----INIT EMAILSJS----- -->
     <script type="text/javascript">
       (function () {
         emailjs.init("8rndlyjk9y3z1CUer");
       })();
     </script>
 
-    <title>Haus Schartner</title>
+    <title>Apartments Schartner</title>
   </head>
 
   <header>
-    <!-------NAVIGATION BAR------->
+    <!-- ====================NAVIGATION BAR==================== -->
     <nav>
       <!-------SIDEBAR ON MOBILE------->
       <ul class="sidebar">
@@ -38,27 +41,60 @@
             </svg>
           </a>
         </li>
-        <li onclick="hideSidebar()"><a href="#section1">Haus Schartner</a></li>
-        <li onclick="hideSidebar()"><a href="#section2">Appartments</a></li>
         <li onclick="hideSidebar()">
-          <a href="#section3">Anfragen und Kontakt</a>
+          <a href="#section1" data-lang="nav-main">Haus Schartner</a>
         </li>
-        <li onclick="hideSidebar()"><a href="#section4">Über Wagrain</a></li>
+        <li onclick="hideSidebar()">
+          <a href="#section2" data-lang="nav-section1">Appartments</a>
+        </li>
+        <li onclick="hideSidebar()">
+          <a href="#section3" data-lang="nav-contact">Anfragen und Kontakt</a>
+        </li>
+        <li onclick="hideSidebar()">
+          <a href="#section4" data-lang="nav-place">Über Wagrain</a>
+        </li>
+        <li class="sidebar-language" onclick="hideSidebar()">
+          <a href="#" onclick="changeLanguage('de')">de</a>
+          <a href="#" onclick="changeLanguage('en')">en</a>
+        </li>
       </ul>
 
       <!-------DESKTOP NAVIGATION------->
       <ul>
         <li>
-          <a href="#sectionHome" id="nav-logo">
+          <a href="#section-hero" id="nav-logo">
             <img src="Pictures/Logo.png" alt="Logo" />
           </a>
         </li>
-        <li class="hideOnMobile"><a href="#section1">Haus Schartner</a></li>
-        <li class="hideOnMobile"><a href="#section2">Appartments</a></li>
-        <li class="hideOnMobile">
-          <a href="#section3">Anfragen und Kontakt</a>
+        <li class="hide-on-mobile">
+          <a href="#section1" data-lang="nav-main">Haus Schartner</a>
         </li>
-        <li class="hideOnMobile"><a href="#section4">Über Wagrain</a></li>
+        <li class="hide-on-mobile">
+          <a href="#section2" data-lang="nav-section1">Appartments</a>
+        </li>
+        <li class="hide-on-mobile">
+          <a href="#section3" data-lang="nav-contact">Anfragen und Kontakt</a>
+        </li>
+        <li class="hide-on-mobile">
+          <a href="#section4" data-lang="nav-place">Über Wagrain</a>
+        </li>
+        <!-- Language Toggle  -->
+        <li class="hide-on-mobile language-dropdown">
+          <img src="Pictures/Flags/de.svg" alt="Deutsch" class="flag-icon" />
+          <div class="language-selector">
+            <img
+              src="Pictures/Flags/de.svg"
+              alt="Deutsch"
+              onclick="changeLanguage('de')"
+            />
+            <img
+              src="Pictures/Flags/us.svg"
+              alt="English"
+              onclick="changeLanguage('en')"
+            />
+          </div>
+        </li>
+
         <li class="menu-button" onclick="showSidebar()">
           <a
             ><svg
@@ -80,15 +116,15 @@
 
   <body>
     <main>
-      <!-------MAIN THEME PICTURE------->
-      <div class="mainPicture" id="sectionHome">
+      <!-- ====================Hero Section==================== -->
+      <div class="hero-section" id="section-hero">
         <div>
-          <h1>
+          <h1 data-lang="hero-h1">
             Haus Apartments <br />
             Schartner
           </h1>
-          <h2>Urlaub in der Salzburger Bergwelt!</h2>
-          <a href="#section3">Jetzt anfragen</a>
+          <h2 data-lang="hero-h2">Urlaub in der Salzburger Bergwelt!</h2>
+          <a href="#section3" data-lang="hero-cta">Jetzt anfragen</a>
         </div>
         <img
           src="Pictures/Index/HouseFront.jpg"
@@ -97,25 +133,27 @@
         />
       </div>
 
-      <!-------MAIN TEXT------->
+      <!-- ====================MAIN TEXT==================== -->
       <section id="section1">
         <div class="parent">
           <div class="child1">
-            <h3>Herzlich Willkommen im Hause Schartner, in WAGRAIN!</h3>
-            <p>
+            <h3 data-lang="welcome">
+              Herzlich Willkommen im Hause Schartner, in WAGRAIN!
+            </h3>
+            <p data-lang="welcome-p1">
               Unser familienfreundliches Haus, liegt in sonniger Lage im
               Moadörfl - Wagrain, 2,5 km von der Autobahnausfahrt Flachau
               entfernt! Die ideale Lage für einen erholsamen, entspannenden oder
               aktiven Urlaub für die ganze Familie.
             </p>
 
-            <p>
+            <p data-lang="welcome-p2">
               Der besondere Reiz an unserem Haus liegt am direkten Einstieg in
               die Salzburger Sportwelt Amadé, an der roten 8er Gondelbahn
               (Wagrainer Höhenbahn).
             </p>
 
-            <p>
+            <p data-lang="welcome-p3">
               In 300m Entfernung, führt die bestens präparierte, 120 km lange
               Tauernloipe vorbei, die alles bietet was das Langlaufherz höher
               schlagen lässt!
@@ -123,21 +161,21 @@
           </div>
 
           <div class="child1">
-            <h3>Benefits:</h3>
-            <p>
+            <h3 data-lang="benefits">Benefits:</h3>
+            <p data-lang="benefits-p1">
               Unser familienfreundliches Haus, liegt in sonniger Lage im
               Moadörfl - Wagrain, 2,5 km von der Autobahnausfahrt Flachau
               entfernt! Die ideale Lage für einen erholsamen, entspannenden oder
               aktiven Urlaub für die ganze Familie.
             </p>
 
-            <p>
+            <p data-lang="benefits-p2">
               Der besondere Reiz an unserem Haus liegt am direkten Einstieg in
               die Salzburger Sportwelt Amadé, an der roten 8er Gondelbahn
               (Wagrainer Höhenbahn).
             </p>
 
-            <p>
+            <p data-lang="benefits-p3">
               In 300m Entfernung, führt die bestens präparierte, 120 km lange
               Tauernloipe vorbei, die alles bietet was das Langlaufherz höher
               schlagen lässt!
@@ -145,25 +183,25 @@
           </div>
         </div>
 
-        <!-------GOOGLE MAP------->
+        <!-- ====================GOOGLE MAP==================== -->
         <div class="map">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1351.3503449050438!2d13.342269419788455!3d47.35924128983485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4776d415f4caf37f%3A0xb4449ece59a68829!2sSchartner!5e0!3m2!1sde!2sat!4v1718529338184!5m2!1sde!2sat"
             style="border: 0"
-            allowfullscreen="flase"
+            allowfullscreen="true"
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
       </section>
 
-      <!-------MAIN TOPICS------->
+      <!-- ====================MAIN TOPICS==================== -->
       <div class="wave-container">
         <div class="wave wave-back"></div>
         <div class="wave wave-front"></div>
       </div>
       <section id="section2">
-        <!-- Full-screen slider for Pictures-->
+        <!----- Full-screen slider for Pictures----->
         <div id="fullScreenSlider" class="fullScreenSlider">
           <span class="close" onclick="closeFullScreenSlider()">&times;</span>
           <div class="fullScreenSlides"></div>
@@ -175,27 +213,27 @@
           </button>
         </div>
 
-        <div class="backgroundExclusive">
-          <h2>Unterkünfte</h2>
-          <!-- First Parent -->
+        <div class="background-exclusive">
+          <h2 data-lang="main-h2">Unterkünfte</h2>
+          <!----- First Parent ----->
           <div class="parent">
             <div class="child1">
-              <h3>Apartment 1</h3>
-              <p>
+              <h3 data-lang="main-apartment-1">Apartment 1</h3>
+              <p data-lang="main-apartment-1-p1">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 Inventore impedit, optio sint, quibusdam eos velit animi
                 obcaecati ullam neque amet dolorum ipsum asperiores odio saepe,
                 cum quidem quia mollitia! Rem?
               </p>
 
-              <p>
+              <p data-lang="main-apartment-1-p2">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 Inventore impedit, optio sint, quibusdam eos velit animi
                 obcaecati ullam neque amet dolorum ipsum asperiores odio saepe,
                 cum quidem quia mollitia! Rem?
               </p>
 
-              <p>
+              <p data-lang="main-apartment-1-p3">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 Inventore impedit, optio sint, quibusdam eos velit animi
                 obcaecati ullam neque amet dolorum ipsum asperiores odio saepe,
@@ -203,16 +241,16 @@
               </p>
             </div>
             <div class="child2">
-              <div class="sliderSmall" data-Slider-index="1">
+              <div class="slider" data-Slider-index="1">
                 <button
                   class="prev"
-                  onclick="changeSlide(this.closest('.sliderSmall'), -1)"
+                  onclick="changeSlide(this.closest('.slider'), -1)"
                 >
                   &#10094;
                 </button>
                 <div
                   class="slides"
-                  onclick="openFullScreenSlider(this.closest('.sliderSmall'))"
+                  onclick="openFullScreenSlider(this.closest('.slider'))"
                 >
                   <img
                     src="Pictures/Index/HouseFront.jpg"
@@ -237,7 +275,7 @@
                 </div>
                 <button
                   class="next"
-                  onclick="changeSlide(this.closest('.sliderSmall'), 1)"
+                  onclick="changeSlide(this.closest('.slider'), 1)"
                 >
                   &#10095;
                 </button>
@@ -245,19 +283,19 @@
             </div>
           </div>
 
-          <!-- Second Parent -->
+          <!----- Second Parent ------>
           <div class="parent">
             <div class="child2">
-              <div class="sliderSmall" data-Slider-index="2">
+              <div class="slider" data-Slider-index="2">
                 <button
                   class="prev"
-                  onclick="changeSlide(this.closest('.sliderSmall'), -1)"
+                  onclick="changeSlide(this.closest('.slider'), -1)"
                 >
                   &#10094;
                 </button>
                 <div
                   class="slides"
-                  onclick="openFullScreenSlider(this.closest('.sliderSmall'))"
+                  onclick="openFullScreenSlider(this.closest('.slider'))"
                 >
                   <img
                     src="Pictures/Index/HouseFront.jpg"
@@ -282,7 +320,7 @@
                 </div>
                 <button
                   class="next"
-                  onclick="changeSlide(this.closest('.sliderSmall'), 1)"
+                  onclick="changeSlide(this.closest('.slider'), 1)"
                 >
                   &#10095;
                 </button>
@@ -313,7 +351,7 @@
             </div>
           </div>
 
-          <!-- Third Parent -->
+          <!----- Third Parent ----->
           <div class="parent">
             <div class="child1">
               <h3>Apartment 3</h3>
@@ -340,16 +378,16 @@
             </div>
 
             <div class="child2">
-              <div class="sliderSmall" data-Slider-index="3">
+              <div class="slider" data-Slider-index="3">
                 <button
                   class="prev"
-                  onclick="changeSlide(this.closest('.sliderSmall'), -1)"
+                  onclick="changeSlide(this.closest('.slider'), -1)"
                 >
                   &#10094;
                 </button>
                 <div
                   class="slides"
-                  onclick="openFullScreenSlider(this.closest('.sliderSmall'))"
+                  onclick="openFullScreenSlider(this.closest('.slider'))"
                 >
                   <img
                     src="Pictures/Index/HouseFront.jpg"
@@ -374,7 +412,7 @@
                 </div>
                 <button
                   class="next"
-                  onclick="changeSlide(this.closest('.sliderSmall'), 1)"
+                  onclick="changeSlide(this.closest('.slider'), 1)"
                 >
                   &#10095;
                 </button>
@@ -389,21 +427,27 @@
         </div>
       </section>
 
-      <!-------FULL WIDTH PICTURE------->
+      <!-- ====================FULL WIDTH PICTURE==================== -->
       <div class="full-width-pictures-frame">
         <div class="full-width-pictures">
-          <!-- Slide 1 -->
+          <!----- Slide 1 ----->
           <div class="full-width-picture">
-            <img src="Pictures/Index/MountainWinter.jpg" alt="Mountain Winter" />
+            <img
+              src="Pictures/Index/MountainWinter.jpg"
+              alt="Mountain Winter"
+            />
             <div class="full-width-picture-text">
               <h1>Atemberaubende Berge.</h1>
               <h2>Unübertroffene Pisten.</h2>
             </div>
           </div>
-      
-          <!-- Slide 2 -->
+
+          <!----- Slide 2 ----->
           <div class="full-width-picture">
-            <img src="Pictures/Index/MountainSummer.jpg" alt="Mountain Summer" />
+            <img
+              src="Pictures/Index/MountainSummer.jpg"
+              alt="Mountain Summer"
+            />
             <div class="full-width-picture-text">
               <h1>Unvergleichliche Wanderlandschaften.</h1>
               <h2>Immer etwas Neues zu erkunden.</h2>
@@ -411,7 +455,7 @@
           </div>
         </div>
       </div>
-      <!-------PRICE TABLE/ CONTACT DATA AND FORM------->
+      <!-- ====================PRICE TABLE/ CONTACT DATA AND FORM==================== -->
       <section id="section3">
         <h2>Jetzt anfragen</h2>
         <div class="parent">
@@ -453,87 +497,118 @@
                 </tbody>
               </table>
 
+              <div>
+                <p>
+                  Die Preise verstehen sich pro Appartement/Tag inkl. Wasser,
+                  Strom, Heizung, Wäsche und exkl. Endreinigung und Ortstaxe -
+                  ausgenommen Pauschalangebote!
+                </p>
+                <p>
+                  Die Appartements werden nur wochenweise vermietet und sind ab
+                  14.00 Uhr bezugsfertig! Haustiere sind nicht erwünscht!
+                </p>
+              </div>
+
               <p>
                 <a href="https://www.snow-space.com/Ticketshop" target="_blank"
                   >Skipass zum Vorteilspreis checken!</a
                 >
               </p>
-              <p>
-                Die Preise verstehen sich pro Appartement/Tag inkl. Wasser,
-                Strom, Heizung, Wäsche und exkl. Endreinigung und Ortstaxe -
-                ausgenommen Pauschalangebote!
-              </p>
-              <p>
-                Die Appartements werden nur wochenweise vermietet und sind ab
-                14.00 Uhr bezugsfertig! Haustiere sind nicht erwünscht!
-              </p>
-              <h3>Kontakt</h3>
-              <p>Heidi und Josef Schartner</p>
-              <p>Tel.: 0664/ 6666666</p>
-              <p>Email: xxx@gmail.com</p>
+
+              <div>
+                <h3>Kontakt</h3>
+                <p>Heidi und Josef Schartner</p>
+                <p>Tel.: 0664/ 6666666</p>
+                <p>Email: xxx@gmail.com</p>
+              </div>
             </div>
           </div>
 
+          <!----- Contact Form ----->
           <div class="child1">
-            <form class="contact-form" id="contact-form">
-              <!-- Date from-to -->
-              <label for="start-date">Datum Vom:</label>
-              <input type="date" id="start-date" name="start_date" required />
-              <br />
-              <label for="end-date">Datum Bis:</label>
-              <input type="date" id="end-date" name="end_date" required /><br />
+            <div class="contact-form">
+              <form id="contact-form">
+                <!-- Date from-to -->
+                <label for="start-date">Datum Vom:</label>
+                <input type="date" id="start-date" name="start_date" required />
+                <br />
+                <label for="end-date">Datum Bis:</label>
+                <input
+                  type="date"
+                  id="end-date"
+                  name="end_date"
+                  required
+                /><br />
 
-              <!-- Apartment selection -->
-              <label for="apartment">Gewünschtes Appartement:</label>
-              <select id="apartment" name="apartment" required>
-                <option value="">-- Bitte wählen --</option>
-                <option value="Apartment 1">Apartment 1</option>
-                <option value="Apartment 2">Apartment 2</option>
-                <option value="Gartenchalets">Gartenchalets</option>
-              </select>
-              <br />
+                <!-- Apartment selection -->
+                <label for="apartment">Gewünschtes Appartement:</label>
+                <select id="apartment" name="apartment" required>
+                  <option value="">-- Bitte wählen --</option>
+                  <option value="Apartment 1">Apartment 1</option>
+                  <option value="Apartment 2">Apartment 2</option>
+                  <option value="Gartenchalets">Gartenchalets</option>
+                </select>
+                <br />
 
-              <!-- Number of adults and children -->
-              <label for="adults">Anzahl Erwachsene:</label>
-              <input type="number" id="adults" name="adults" min="1" required />
-              <br />
+                <!-- Number of adults and children -->
+                <label for="adults">Anzahl Erwachsene:</label>
+                <input
+                  type="number"
+                  id="adults"
+                  name="adults"
+                  min="1"
+                  required
+                />
+                <br />
 
-              <label for="children">Anzahl Kinder:</label>
-              <input type="number" id="children" name="children" min="0" />
-              <br />
+                <label for="children">Anzahl Kinder:</label>
+                <input type="number" id="children" name="children" min="0" />
+                <br />
 
-              <!-- Contact Information -->
-              <label for="name">Name:</label>
-              <input type="text" id="name" name="name" required /><br />
+                <!-- Contact Information -->
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required /><br />
 
-              <label for="street">Strasse:</label>
-              <input type="text" id="street" name="street" required /><br />
+                <label for="street">Strasse:</label>
+                <input type="text" id="street" name="street" required /><br />
 
-              <label for="city">Stadt:</label>
-              <input type="text" id="city" name="city" required /><br />
+                <label for="city">Stadt:</label>
+                <input type="text" id="city" name="city" required /><br />
 
-              <label for="tel">Telefon:</label>
-              <input type="tel" id="tel" name="tel" required /><br />
+                <label for="tel">Telefon:</label>
+                <input type="tel" id="tel" name="tel" required /><br />
 
-              <label for="email">E-Mail:</label>
-              <input type="email" id="email" name="email" required /><br />
+                <label for="email">E-Mail:</label>
+                <input type="email" id="email" name="email" required /><br />
 
-              <!-- Comments Section -->
-              <label for="comments">Anmerkungen:</label>
-              <textarea id="comments" name="comments" rows="4"></textarea><br />
+                <!-- Comments Section -->
+                <label for="comments">Anmerkungen:</label>
+                <textarea id="comments" name="comments" rows="4"></textarea
+                ><br />
 
-              <button type="submit">Absenden</button>
-            </form>
+                <!-- Checkbox DSVGO  -->
+                <label>
+                  <input type="checkbox" id="dsgvo" name="dsgvo" required />
+                  Ich stimme der Verarbeitung meiner personenbezogenen Daten
+                  gemäß der
+                  <a href="index.html" target="_blank">DSVGO</a>
+                  zu.
+                </label>
 
-            <div id="success-message" class="success-message">
-              Anfrage wurde gesendet!
-              <span class="checkmark">&#10003;</span>
+                <button type="submit">Absenden</button><br />
+              </form>
+
+              <div id="success-message" class="success-message">
+                Anfrage wurde gesendet!
+                <span class="checkmark">&#10003;</span>
+              </div>
+
             </div>
           </div>
         </div>
       </section>
 
-      <!-------ABOUT WAGRAIN------->
+      <!-- ====================ABOUT WAGRAIN==================== -->
       <section id="section4">
         <h2>Paradies im Sommer und Winter</h2>
         <div class="parent" id="section4">
@@ -562,10 +637,10 @@
       </section>
     </main>
 
-    <!-------FOOTER------->
+    <!-- ====================FOOTER==================== -->
     <footer>
       <div class="footer">
-        <div class="footerContent">
+        <div>
           <h3>Haus Schartner</h3>
           <p>Familie Schartner</p>
           <p>Moordörfl</p>
@@ -574,10 +649,10 @@
           <p>Tel.: 06640000000</p>
         </div>
 
-        <div class="footerContent">
+        <div>
           <h3>Links</h3>
           <ul>
-            <li><a href="#sectionHome">Home</a></li>
+            <li><a href="#section-hero">Home</a></li>
             <li><a href="#section1">Haus Schartner</a></li>
             <li><a href="#section2">Appartment</a></li>
             <li><a href="#section3">Anfragen</a></li>
@@ -585,7 +660,7 @@
           </ul>
         </div>
 
-        <div class="footerContent">
+        <div>
           <h3>Rechtliches</h3>
           <ul>
             <li><a href="index.html">AGB</a></li>
@@ -594,8 +669,8 @@
         </div>
       </div>
 
-      <!-----Bottom Barrier----->
-      <div class="bottomBarrier">
+      <!-- ====================Bottom Barrier==================== -->
+      <div class="bottom-barrier">
         <p>&copy; 2024 Thomas Kreuzsaler. All rights reserved</p>
       </div>
     </footer>

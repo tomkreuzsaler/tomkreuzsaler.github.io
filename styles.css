@@ -1,3 +1,4 @@
+
 :root {
   --light-text-color: rgb(255, 255, 255);
   --dark-text-color: rgb(0, 0, 0);
@@ -8,13 +9,16 @@
 }
 html {
   scroll-behavior: smooth;
+
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
   background-size: cover;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
 }
 
 section {
@@ -50,7 +54,7 @@ h3 {
 }
 
 
-/*-----STYLES FOR NAVIGATIONBAR-----*/
+/*====================STYLES FOR NAVIGATIONBAR====================*/
 nav {
   position: fixed;
   width: 100%;
@@ -99,6 +103,45 @@ nav li:first-child {
   margin-right: auto; 
 }
 
+/* -----Language Selector on Desktop----- */
+.language-dropdown{
+  display: flex;
+  align-items: center;
+  margin: 0px 5px;
+
+}
+.flag-icon {
+  width: 28px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.language-selector {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background-color: white;
+  border: 1px solid #ddd;
+  z-index: 1000;
+
+}
+
+.language-dropdown:hover .language-selector {
+  display: flex; 
+}
+
+.language-selector img {
+  width: 28px;
+  height: 18px;
+  padding: 1px;
+  cursor: pointer;
+}
+
+.language-selector img:hover {
+  transform: scale(1.05);
+}
+
 
 /*-----SIDEBAR FOR SMALL DEVICES-----*/
 .sidebar {
@@ -121,16 +164,24 @@ nav li:first-child {
 .sidebar li {
   width: 100%;
 }
+.sidebar li:last-child{
+  margin-top: auto;
+}
 .sidebar a {
   width: 100%;
+}
+.sidebar-language{
+  display: flex;
+  text-decoration: underline;
+
 }
 .menu-button {
   display: none;
 }
 
 
-/*-----Main Picture/ HERO SECTION-----*/
-.mainPicture {
+/*====================Main Picture/ HERO SECTION====================*/
+.hero-section {
   position: relative;
   padding: 0;
   margin: 0;
@@ -141,13 +192,13 @@ nav li:first-child {
   z-index: 0;
 }
 
-.mainPicture img {
+.hero-section img {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
 }
-.mainPicture div {
+.hero-section div {
   position: absolute;
   margin: 0;
   margin-top: 60px;
@@ -160,7 +211,7 @@ nav li:first-child {
   gap: 5vw;
 
 }
-.mainPicture h1 {
+.hero-section h1 {
   position: relative;
   margin: 0;
   padding: 0;
@@ -169,7 +220,7 @@ nav li:first-child {
   font-size: 6vw;
   text-align: left;
 }
-.mainPicture h2 {
+.hero-section h2 {
   position: relative;
   margin: 0;
   padding: 0;
@@ -178,7 +229,7 @@ nav li:first-child {
   font-size: 3vw;
   text-align: left;
 }
-.mainPicture a {
+.hero-section a {
   position: relative;
   padding: 1vw 2vw;
   z-index: 10;
@@ -195,25 +246,25 @@ nav li:first-child {
   cursor: pointer;
 }
 
-.mainPicture a:hover {
+.hero-section a:hover {
   background-color: lightgray;
   color: var(--color-call-to-action);
   transform: scale(1.05);
   box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4);
 }
 
-/*-----Style for Main Topics-----*/
+/*====================Style for SectionX Topics====================*/
 /*-----Different Background-----*/
-.backgroundExclusive h2 {
+.background-exclusive h2 {
   background-color: var(--color-sencondary);
   margin: 0;
 }
 
-.backgroundExclusive div {
+.background-exclusive div {
   background-color: var(--color-sencondary);
 }
 
-/*-----WAVE DESIGN-----*/
+/*-----WAVE DESIGN------*/
 .wave-container {
   position: relative;
   width: 100%;
@@ -256,33 +307,36 @@ nav li:first-child {
   margin: 0;
   padding: 5%;
   width: 90%;
+  height: fit-content;
+  min-height: fit-content;
   background-color: white;
   display: flex;
   flex-wrap: wrap;
   gap: 5%;
+  font-size: 20px;
+
 }
 
 .child1 {
   flex: 1;
   min-width: 300px;
   padding: 0;
-  font-size: 20px;
+
+  
 }
 
 .child1 a {
   color: var(--dark-text-color);
-  text-decoration: none;
-}
-
-.child1 a:hover {
   text-decoration: underline;
 }
+
 
 .child2 {
   flex: 1;
   min-width: 300px;
   padding: 0;
   font-size: 20px;
+  overflow: hidden;
 }
 
 .parent p {
@@ -292,6 +346,7 @@ nav li:first-child {
 .parent img {
   width: 100%;
   height: auto;
+
 }
 
 .map iframe {
@@ -300,17 +355,9 @@ nav li:first-child {
   height: 350px;
 }
 
-/*-----SLIDER-----*/
-.slider {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  max-height: 100vh;
-  overflow: hidden;
-  z-index: 0;
-}
+/*====================SLIDER====================*/
 
-.sliderSmall {
+.slider {
   position: relative;
   width: 100%;
   height: auto;
@@ -318,10 +365,10 @@ nav li:first-child {
   z-index: 0;
   
 }
-.sliderSmall img{
+.slider img{
   transition: ease 0.3s;
  }
-.sliderSmall img:hover {
+.slider img:hover {
  transform: scale(1.05);
 }
 .slides {
@@ -331,11 +378,9 @@ nav li:first-child {
 
 .slide {
   min-width: 100%;
-  transition: opacity 0.5s ease-in-out;
 }
 
 .slider button,
-.sliderSmall button,
 .fullScreenSlider button {
   position: absolute;
   top: 50%;
@@ -363,11 +408,11 @@ nav li:first-child {
   right: 10px;
 }
 
-/*-----Full Screen Slider-----*/
+/*====================Full Screen Slider====================*/
 .fullScreenSlider {
   display: none;
   position: fixed;
-  z-index: 1000;
+  z-index: 10000;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -384,6 +429,7 @@ nav li:first-child {
   justify-content: center;
   align-items: center;
   height: 100%;
+
 }
 
 .fullScreenSlides img {
@@ -407,7 +453,7 @@ nav li:first-child {
 }
 
 
-/*-----Picture over whole Screen for a break in the Layout-----*/
+/*====================Picture over whole Screen for a break in the Layout====================*/
 .full-width-pictures-frame {
   position: relative;
   width: 100%;
@@ -464,16 +510,19 @@ nav li:first-child {
 }
 
 
-/*-----Styles for Price Table-----*/
+/*====================Styles for Price Table====================*/
 .price-table {
-  height: fit-content;
-  min-height: 96%;
-  padding: 4%;
+  height: 100%;
+  padding: 2%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: var(--color-sencondary);
   color: var(--dark-text-color);
-  overflow-x: auto; 
+ 
 }
 
 .price-table h3 {
@@ -484,6 +533,7 @@ nav li:first-child {
 .price-table table {
   width: 100%;
   border-collapse: collapse;
+  overflow-x: auto;
   font-size:  max(1.5vw, 10px);
 }
 
@@ -514,11 +564,11 @@ nav li:first-child {
 }
 
 
-/*-----Styles for Contact Form-----*/
+/*====================Styles for Contact Form====================*/
 .contact-form {
-  height: 96%;
-  margin-bottom: 50px;
-  padding: 4%;
+  height: 100%;
+  padding: 2%;
+  box-sizing: border-box;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: var(--color-sencondary);
@@ -584,13 +634,12 @@ nav li:first-child {
 }
 
 .success-message {
-  display: none;
+  display: block;
   color: green;
   font-size: 20px;
   font-weight: bold;
-}
-.success-message.show {
-  display: block;
+  opacity: 0;
+
 }
 .checkmark {
   color: green;
@@ -598,8 +647,13 @@ nav li:first-child {
   margin-left: 10px;
 }
 
+.success-message.show {
+  opacity: 1;
 
-/*-----footer-----*/
+}
+
+
+/*====================Footer====================*/
 .footer {
   margin: 0px;
   padding: 10px;
@@ -635,7 +689,7 @@ nav li:first-child {
   text-decoration: none;
 }
 
-.bottomBarrier {
+.bottom-barrier {
   margin: 0;
   padding: 0;
   background-color: var(--color-main);
@@ -646,10 +700,10 @@ nav li:first-child {
 }
 
 
-/*-----MEDIA QUERYS-----*/
-@media (max-width: 768px) {
+/*====================MEDIA QUERYS====================*/
+@media (max-width: 850px) {
   /*-----NAV BAR-----*/
-  .hideOnMobile {
+  .hide-on-mobile {
     display: none;
   }
   .menu-button {
@@ -663,6 +717,10 @@ nav li:first-child {
   }
 
   /*-----MAIN TOPICS-----*/
+  .parent{
+    flex-direction: column;
+  }
+
   .child1,
   .child2 {
     margin-top: 2%;
@@ -685,19 +743,19 @@ nav li:first-child {
 }
 
 
-/*-----ANIMAIONS-----*/
+/*====================ANIMAIONS====================*/
 /* Keyframes for fill width Picture animation */
 @keyframes slideShow {
   0% {
     transform: translateX(0); 
   }
-  25% {
+  40% {
     transform: translateX(0%); 
   }
   50% {
     transform: translateX(-50%); 
   }
-  75% {
+  90% {
     transform: translateX(-50%); 
   }
   100% {

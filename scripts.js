@@ -1,5 +1,5 @@
 
-// -----SIDEBAR-----
+// ====================SIDEBAR====================
 function showSidebar(){
   const sidebar = document.querySelector('.sidebar')
   sidebar.style.transform = 'translateX(0%)'
@@ -11,24 +11,18 @@ sidebar.style.transform = 'translateX(100%)'
 }
 
 
-// ----INIT SLIDERS-----
+// ====================INIT SLIDERS====================
 document.addEventListener("DOMContentLoaded", () => {
+
   const sliders = document.querySelectorAll(".slider");
 
   sliders.forEach((slider) => {
     slider.dataset.currentSlide = 0;
     changeSlide(slider, 0);
   });
-
-  const slidersSmall = document.querySelectorAll(".sliderSmall");
-
-  slidersSmall.forEach((sliderSmall) => {
-    sliderSmall.dataset.currentSlide = 0;
-    changeSlide(sliderSmall, 0);
-  });
 });
 
-// -----SLIDER CHANGE SLIDE-----
+// ====================SLIDER CHANGE SLIDE====================
 function changeSlide(sliderContainer, direction) {
   const slides = sliderContainer.querySelectorAll(".slide");
   const totalSlides = slides.length;
@@ -52,14 +46,15 @@ function changeSlide(sliderContainer, direction) {
   sliderContainer.dataset.currentSlide = currentSlide;
 }
 
-// -----FULLSCREENSLIDER-----
-function openFullScreenSlider(sliderSmall) {
+
+// ====================FULLSCREENSLIDER====================
+function openFullScreenSlider(slider) {
   const fullScreenSlider = document.getElementById("fullScreenSlider");
   const fullScreenSlides = fullScreenSlider.querySelector(".fullScreenSlides");
 
-  // Get current Slide ID from Small Slider
-  const currentSlides = sliderSmall.querySelectorAll(".slide");
-  const currentSlide = parseInt(sliderSmall.dataset.currentSlide); 
+  // Get current Slide ID from  Slider
+  const currentSlides = slider.querySelectorAll(".slide");
+  const currentSlide = parseInt(slider.dataset.currentSlide); 
 
   fullScreenSlides.innerHTML = "";
   currentSlides.forEach((slide, index) => {
@@ -73,7 +68,7 @@ function openFullScreenSlider(sliderSmall) {
     fullScreenSlides.appendChild(img);
   });
 
-  fullScreenSlider.dataset.currentSlider = sliderSmall.dataset.smallSliderIndex; 
+  fullScreenSlider.dataset.currentSlider = slider.dataset.SliderIndex; 
   fullScreenSlider.style.display = "block";
 }
 
@@ -100,7 +95,7 @@ function changeFullScreenSlide(direction) {
 }
 
 
-// -----CONTACT FORM EMAIJS-----
+// ====================CONTACT FORM EMAIJS====================
 document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();  // Prevent the form from submitting normally
